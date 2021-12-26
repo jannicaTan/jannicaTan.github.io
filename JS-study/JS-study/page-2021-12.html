@@ -9,7 +9,7 @@
     
     <title>
         
-            Hello World |
+            JS运算符：短路运算/赋值运算 |
         
         Jing&#39;s Blog
     </title>
@@ -139,7 +139,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">Hello World</span>
+            <span class="title-hover-animation">JS运算符：短路运算/赋值运算</span>
         </div>
 
         
@@ -158,8 +158,8 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fas fa-edit"></i>&nbsp;
-        <span class="pc">2021-12-21 09:48:07</span>
-        <span class="mobile">2021-12-21 09:48</span>
+        <span class="pc">2021-12-26 10:11:50</span>
+        <span class="mobile">2021-12-26 10:11</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -167,7 +167,7 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/test/">test</a>&nbsp;
+                        <a href="/categories/JS-study/">JS-study</a>&nbsp;
                     </li>
                 
             </ul>
@@ -178,7 +178,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>75 Words</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>306 Words</span>
         </span>
     
     
@@ -199,19 +199,46 @@
         
 
         <div class="article-content markdown-body">
-            <p>Welcome to <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/" >Hexo<i class="fas fa-external-link-alt"></i></a>! This is your very first post. Check <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/" >documentation<i class="fas fa-external-link-alt"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html" >troubleshooting<i class="fas fa-external-link-alt"></i></a> or you can ask me on <a class="link"   target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues" >GitHub<i class="fas fa-external-link-alt"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+            <h4 id="1-短路运算-逻辑中断"><a href="#1-短路运算-逻辑中断" class="headerlink" title="1.短路运算(逻辑中断)"></a>1.短路运算(逻辑中断)</h4><p><strong>原理：</strong> 当有多个表达式（值）时,左边的表达式值可以确定结果时,就不再继续运算右边的表达式的值</p>
+<h5 id="①逻辑与"><a href="#①逻辑与" class="headerlink" title="①逻辑与"></a>①逻辑与</h5><p>语法：<code>表达式1 &amp;&amp; 表达式2</code></p>
+<p>如果第一个表达式的值为<strong>真</strong>，则返回<u>表达式2</u></p>
+<p>如果第一个表达式的值为<strong>假</strong>，则返回<u>表达式1</u></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">123</span> &amp;&amp; <span class="number">456</span>);   <span class="comment">//456</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">0</span> &amp;&amp; <span class="number">456</span>);     <span class="comment">//0</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">123</span> &amp;&amp; <span class="number">456</span> &amp;&amp; <span class="number">789</span>);  <span class="comment">//789</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html" >Writing<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h5 id="②逻辑或"><a href="#②逻辑或" class="headerlink" title="②逻辑或"></a>②逻辑或</h5><p>语法：<code>表达式1 || 表达式2</code></p>
+<p>如果第一个表达式的值为<strong>真</strong>，则返回<u>表达式1</u></p>
+<p>如果第一个表达式的值为<strong>假</strong>，则返回<u>表达式2</u></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">123</span> || <span class="number">456</span>); <span class="comment">//123</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">0</span> || <span class="number">456</span>);   <span class="comment">//456</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">123</span> || <span class="number">456</span> || <span class="number">789</span>);  <span class="comment">//123</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/server.html" >Server<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">0</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">123</span> || num++);</span><br><span class="line"><span class="comment">// 先返回在加，相当于 (123 || 0)</span></span><br><span class="line"><span class="built_in">console</span>.log(num);    <span class="comment">// 123</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html" >Generating<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h4 id="2-赋值运算符"><a href="#2-赋值运算符" class="headerlink" title="2.赋值运算符"></a>2.赋值运算符</h4><p><strong>概念：</strong> 用来把数据赋值给变量的运算符。</p>
+<table>
+<thead>
+<tr>
+<th>赋值运算符</th>
+<th>说明</th>
+<th>案例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>=</td>
+<td>直接赋值</td>
+<td>var usrName = ‘我是值’</td>
+</tr>
+<tr>
+<td>+= ，-=</td>
+<td>加，减一个数后再赋值</td>
+<td>var age = 10； age+=5；//15</td>
+</tr>
+<tr>
+<td>*=，/=，%=</td>
+<td>成，除，取模后再赋值</td>
+<td>var age = 2; age*=5; //10</td>
+</tr>
+</tbody></table>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> age = <span class="number">10</span>;</span><br><span class="line">age += <span class="number">5</span>;  <span class="comment">// 相当于 age = age + 5;</span></span><br><span class="line">age -= <span class="number">5</span>;  <span class="comment">// 相当于 age = age - 5;</span></span><br><span class="line">age *= <span class="number">10</span>; <span class="comment">// 相当于 age = age * 10;</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html" >Deployment<i class="fas fa-external-link-alt"></i></a></p>
 
         </div>
 
@@ -219,11 +246,11 @@
             <div class="post-copyright-info">
                 <div class="article-copyright-info-container">
     <ul>
-        <li>Post title：Hello World</li>
+        <li>Post title：JS运算符：短路运算/赋值运算</li>
         <li>Post author：JannicaTan</li>
-        <li>Create time：2021-12-21 09:48:07</li>
+        <li>Create time：2021-12-26 10:11:50</li>
         <li>
-            Post link：https://jannicatan.github.io/test/hello-world-2021-12.html
+            Post link：https://jannicatan.github.io/JS-study/JS-study/page-2021-12.html
         </li>
         <li>
             Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
@@ -239,21 +266,21 @@
         
             <div class="article-nav">
                 
-                    <div class="article-prev">
-                        <a class="prev"
-                           rel="prev"
-                           href="/JS-study/JS-study/page-2021-12.html"
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/test/hello-world-2021-12.html"
                         >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">JS运算符：短路运算/赋值运算</span>
-                                <span class="post-nav-item">Prev posts</span>
+                                <span class="post-nav-title-item">Hello World</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
                             </span>
                         </a>
                     </div>
-                
                 
             </div>
         
@@ -371,7 +398,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E7%9F%AD%E8%B7%AF%E8%BF%90%E7%AE%97-%E9%80%BB%E8%BE%91%E4%B8%AD%E6%96%AD"><span class="nav-number">1.</span> <span class="nav-text">1.短路运算(逻辑中断)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E2%91%A0%E9%80%BB%E8%BE%91%E4%B8%8E"><span class="nav-number">1.1.</span> <span class="nav-text">①逻辑与</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E2%91%A1%E9%80%BB%E8%BE%91%E6%88%96"><span class="nav-number">1.2.</span> <span class="nav-text">②逻辑或</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">2.</span> <span class="nav-text">2.赋值运算符</span></a></li></ol>
     </div>
 </div>
         </aside>
