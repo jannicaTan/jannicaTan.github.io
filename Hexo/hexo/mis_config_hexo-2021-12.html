@@ -9,7 +9,7 @@
     
     <title>
         
-            JavaScript-运算符：短路运算/赋值运算 |
+            关于配置hexo的坑及解决办法 |
         
         Jing&#39;s Blog
     </title>
@@ -152,7 +152,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">JavaScript-运算符：短路运算/赋值运算</span>
+            <span class="title-hover-animation">关于配置hexo的坑及解决办法</span>
         </div>
 
         
@@ -171,8 +171,8 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fas fa-edit"></i>&nbsp;
-        <span class="pc">2021-12-26 10:11:50</span>
-        <span class="mobile">2021-12-26 10:11</span>
+        <span class="pc">2021-12-27 09:52:38</span>
+        <span class="mobile">2021-12-27 09:52</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -180,7 +180,7 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/JavaScript/">JavaScript</a>&nbsp;
+                        <a href="/categories/Hexo/">Hexo</a>&nbsp;
                     </li>
                 
             </ul>
@@ -192,7 +192,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/JS%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">JS基础语法</a>&nbsp;
+                        <a href="/tags/Hexo/">Hexo</a>&nbsp;
                     </li>
                 
             </ul>
@@ -202,12 +202,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>306 Words</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>724 Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fas fa-clock"></i>&nbsp;<span>1 Mins</span>
+            <i class="fas fa-clock"></i>&nbsp;<span>2 Mins</span>
         </span>
     
     
@@ -223,58 +223,59 @@
         
 
         <div class="article-content markdown-body">
-            <h4 id="1-短路运算-逻辑中断"><a href="#1-短路运算-逻辑中断" class="headerlink" title="1.短路运算(逻辑中断)"></a>1.短路运算(逻辑中断)</h4><p><strong>原理：</strong> 当有多个表达式（值）时,左边的表达式值可以确定结果时,就不再继续运算右边的表达式的值</p>
-<h5 id="①逻辑与"><a href="#①逻辑与" class="headerlink" title="①逻辑与"></a>①逻辑与</h5><p>语法：<code>表达式1 &amp;&amp; 表达式2</code></p>
-<p>如果第一个表达式的值为<strong>真</strong>，则返回<u>表达式2</u></p>
-<p>如果第一个表达式的值为<strong>假</strong>，则返回<u>表达式1</u></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">123</span> &amp;&amp; <span class="number">456</span>);   <span class="comment">//456</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">0</span> &amp;&amp; <span class="number">456</span>);     <span class="comment">//0</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">123</span> &amp;&amp; <span class="number">456</span> &amp;&amp; <span class="number">789</span>);  <span class="comment">//789</span></span><br></pre></td></tr></table></figure>
+            <p>最近在学习配置hexo，遇到了一些安装坑，去搜解决方式还遇到了网上不负责任的回答。于是决定还是记录下来 再有人和我一样的情况也不用抓耳挠腮了 </p>
+<p>本文只针对<strong>我遇到的问题和解决方式</strong> 如有不对还请指出 </p>
+<h4 id="环境及主题："><a href="#环境及主题：" class="headerlink" title="环境及主题："></a>环境及主题：</h4><p>我使用的hexo+Github的配合</p>
+<p>主题:keep主题,很推荐 整个的配置教程很清晰</p>
+<p>这里放上github地址：<code>https://github.com/XPoet/hexo-theme-keep</code></p>
+<h4 id="1-关于指令："><a href="#1-关于指令：" class="headerlink" title="1.关于指令："></a>1.关于指令：</h4><p><code>keep g</code>: 生成文件</p>
+<p><code>keep deploy</code>: 部署文件</p>
+<p><code>keep s</code>:可以在本地预览修改后的样子 </p>
+<p>在正式提交前 可以在本地预览到满意再提交！不用一遍遍的提交去线上查看！！</p>
+<h4 id="2-关于修改背景图片，部署到线上后，显示空白"><a href="#2-关于修改背景图片，部署到线上后，显示空白" class="headerlink" title="2.关于修改背景图片，部署到线上后，显示空白"></a>2.关于修改背景图片，部署到线上后，显示空白</h4><p>首先打开开发者模式，在控制台查看是否图片报错，如果报错，多半是url出问题了,返回<u>主题的配置文件</u>中修改你的url就可以了</p>
+<h4 id="3-关于keep主题分类-标签创建后，不能正确显示分类及个数"><a href="#3-关于keep主题分类-标签创建后，不能正确显示分类及个数" class="headerlink" title="3.关于keep主题分类/标签创建后，不能正确显示分类及个数"></a>3.关于keep主题分类/标签创建后，不能正确显示分类及个数</h4><h5 id="3-1生成“分类”页并添加tpye属性"><a href="#3-1生成“分类”页并添加tpye属性" class="headerlink" title="3.1生成“分类”页并添加tpye属性"></a>3.1生成“分类”页并添加tpye属性</h5><p>打开命令行，进入博客所在文件夹。执行命令</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo <span class="keyword">new</span> page categories</span><br></pre></td></tr></table></figure>
 
-<h5 id="②逻辑或"><a href="#②逻辑或" class="headerlink" title="②逻辑或"></a>②逻辑或</h5><p>语法：<code>表达式1 || 表达式2</code></p>
-<p>如果第一个表达式的值为<strong>真</strong>，则返回<u>表达式1</u></p>
-<p>如果第一个表达式的值为<strong>假</strong>，则返回<u>表达式2</u></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">123</span> || <span class="number">456</span>); <span class="comment">//123</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">0</span> || <span class="number">456</span>);   <span class="comment">//456</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">123</span> || <span class="number">456</span> || <span class="number">789</span>);  <span class="comment">//123</span></span><br></pre></td></tr></table></figure>
+<p>找到<code>source/categories/index.md</code>这个文件，添加<code>type: &quot;categories&quot;</code>到内容中：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: category //这里注意一定要与themes/keep/layout/page.ejs中的关于分类的title一致</span><br><span class="line">date: <span class="number">2021</span>-<span class="number">12</span>-<span class="number">21</span> <span class="number">18</span>:<span class="number">07</span>:<span class="number">36</span></span><br><span class="line">type: <span class="string">&quot;categories&quot;</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">0</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">123</span> || num++);</span><br><span class="line"><span class="comment">// 先返回在加，相当于 (123 || 0)</span></span><br><span class="line"><span class="built_in">console</span>.log(num);    <span class="comment">// 123</span></span><br></pre></td></tr></table></figure>
+<p>保存并关闭文件。</p>
+<p>❗️关于不能正确显示分类及个数检查两点❗️</p>
+<ul>
+<li>keep主题：<ul>
+<li>检查这里的title名是否与<code>themes/keep/layout/page.ejs</code>中的关于分类的title一致：应为category或者categories</li>
+</ul>
+</li>
+<li>非keep主题:<ul>
+<li>找到主题对应的<code>themes/keep/layout/</code>再其下方文件中找到关于分类的<code>xxx.ejs</code>文件复制文件名，返回<code>source/categories/index.md</code>添加一行<code>layout: xxx.ejs</code>即可</li>
+</ul>
+</li>
+</ul>
+<h5 id="3-2-给文章添加“categories”属性"><a href="#3-2-给文章添加“categories”属性" class="headerlink" title="3.2 给文章添加“categories”属性"></a>3.2 给文章添加“categories”属性</h5><p>打开需要添加分类的文章，为其添加categories属性。下方的<code>categories: web前端</code>表示添加这篇文章到“web前端”这个分类。注意：hexo一篇文章只能属于一个分类，也就是说如果在“- web前端”下方添加“-xxx”，hexo不会产生两个分类，而是把分类嵌套（即该文章属于 “- web前端”下的 “-xxx ”分类）。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 文章标题</span><br><span class="line">date: XXXXX</span><br><span class="line">categories: 文章对应的分类（自拟）</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 
-<h4 id="2-赋值运算符"><a href="#2-赋值运算符" class="headerlink" title="2.赋值运算符"></a>2.赋值运算符</h4><p><strong>概念：</strong> 用来把数据赋值给变量的运算符。</p>
-<table>
-<thead>
-<tr>
-<th>赋值运算符</th>
-<th>说明</th>
-<th>案例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>=</td>
-<td>直接赋值</td>
-<td>var usrName = ‘我是值’</td>
-</tr>
-<tr>
-<td>+= ，-=</td>
-<td>加，减一个数后再赋值</td>
-<td>var age = 10； age+=5；//15</td>
-</tr>
-<tr>
-<td>*=，/=，%=</td>
-<td>成，除，取模后再赋值</td>
-<td>var age = 2; age*=5; //10</td>
-</tr>
-</tbody></table>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> age = <span class="number">10</span>;</span><br><span class="line">age += <span class="number">5</span>;  <span class="comment">// 相当于 age = age + 5;</span></span><br><span class="line">age -= <span class="number">5</span>;  <span class="comment">// 相当于 age = age - 5;</span></span><br><span class="line">age *= <span class="number">10</span>; <span class="comment">// 相当于 age = age * 10;</span></span><br></pre></td></tr></table></figure>
-
-
+<p>⚠️注意：只有添加了<code>categories: xxx</code>的文章才会被收录到首页的“分类”中。</p>
+<h4 id="4-关于hexo多终端同步的问题"><a href="#4-关于hexo多终端同步的问题" class="headerlink" title="4.关于hexo多终端同步的问题"></a>4.关于hexo多终端同步的问题</h4><p>我找到两个方法，目前我使用的是第一种，这两种方法的解答都将多终端解释的比较清楚，可以自行选择</p>
+<ul>
+<li><a class="link"   target="_blank" rel="noopener" href="https://www.jianshu.com/p/fceaf373d797" >https://www.jianshu.com/p/fceaf373d797<i class="fas fa-external-link-alt"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://www.zhihu.com/question/21193762" >https://www.zhihu.com/question/21193762<i class="fas fa-external-link-alt"></i></a><ul>
+<li>直上云霄的回答</li>
+<li><a class="link"   target="_blank" rel="noopener" href="http://fangzh.top/2018/2018090715/" >http://fangzh.top/2018/2018090715/<i class="fas fa-external-link-alt"></i></a></li>
+</ul>
+</li>
+</ul>
+<h4 id="5-未待完续"><a href="#5-未待完续" class="headerlink" title="5.未待完续"></a>5.未待完续</h4>
         </div>
 
         
             <div class="post-copyright-info">
                 <div class="article-copyright-info-container">
     <ul>
-        <li>Post title：JavaScript-运算符：短路运算/赋值运算</li>
+        <li>Post title：关于配置hexo的坑及解决办法</li>
         <li>Post author：JannicaTan</li>
-        <li>Create time：2021-12-26 10:11:50</li>
+        <li>Create time：2021-12-27 09:52:38</li>
         <li>
-            Post link：https://jannicatan.github.io/JavaScript/JS-study/运算符-2021-12.html
+            Post link：https://jannicatan.github.io/Hexo/hexo/mis_config_hexo-2021-12.html
         </li>
         <li>
             Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
@@ -289,7 +290,7 @@
             <ul class="post-tags-box">
                 
                     <li class="tag-item">
-                        <a href="/tags/JS%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">#JS基础语法</a>&nbsp;
+                        <a href="/tags/Hexo/">#Hexo</a>&nbsp;
                     </li>
                 
             </ul>
@@ -298,21 +299,21 @@
         
             <div class="article-nav">
                 
-                    <div class="article-prev">
-                        <a class="prev"
-                           rel="prev"
-                           href="/Hexo/hexo/mis_config_hexo-2021-12.html"
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/JavaScript/JS-study/%E8%BF%90%E7%AE%97%E7%AC%A6-2021-12.html"
                         >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">关于配置hexo的坑及解决办法</span>
-                                <span class="post-nav-item">Prev posts</span>
+                                <span class="post-nav-title-item">JavaScript-运算符：短路运算/赋值运算</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
                             </span>
                         </a>
                     </div>
-                
                 
             </div>
         
@@ -430,7 +431,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E7%9F%AD%E8%B7%AF%E8%BF%90%E7%AE%97-%E9%80%BB%E8%BE%91%E4%B8%AD%E6%96%AD"><span class="nav-number">1.</span> <span class="nav-text">1.短路运算(逻辑中断)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E2%91%A0%E9%80%BB%E8%BE%91%E4%B8%8E"><span class="nav-number">1.1.</span> <span class="nav-text">①逻辑与</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E2%91%A1%E9%80%BB%E8%BE%91%E6%88%96"><span class="nav-number">1.2.</span> <span class="nav-text">②逻辑或</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">2.</span> <span class="nav-text">2.赋值运算符</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E5%8F%8A%E4%B8%BB%E9%A2%98%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">环境及主题：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%85%B3%E4%BA%8E%E6%8C%87%E4%BB%A4%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">1.关于指令：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%85%B3%E4%BA%8E%E4%BF%AE%E6%94%B9%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%EF%BC%8C%E9%83%A8%E7%BD%B2%E5%88%B0%E7%BA%BF%E4%B8%8A%E5%90%8E%EF%BC%8C%E6%98%BE%E7%A4%BA%E7%A9%BA%E7%99%BD"><span class="nav-number">3.</span> <span class="nav-text">2.关于修改背景图片，部署到线上后，显示空白</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E5%85%B3%E4%BA%8Ekeep%E4%B8%BB%E9%A2%98%E5%88%86%E7%B1%BB-%E6%A0%87%E7%AD%BE%E5%88%9B%E5%BB%BA%E5%90%8E%EF%BC%8C%E4%B8%8D%E8%83%BD%E6%AD%A3%E7%A1%AE%E6%98%BE%E7%A4%BA%E5%88%86%E7%B1%BB%E5%8F%8A%E4%B8%AA%E6%95%B0"><span class="nav-number">4.</span> <span class="nav-text">3.关于keep主题分类&#x2F;标签创建后，不能正确显示分类及个数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-1%E7%94%9F%E6%88%90%E2%80%9C%E5%88%86%E7%B1%BB%E2%80%9D%E9%A1%B5%E5%B9%B6%E6%B7%BB%E5%8A%A0tpye%E5%B1%9E%E6%80%A7"><span class="nav-number">4.1.</span> <span class="nav-text">3.1生成“分类”页并添加tpye属性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-2-%E7%BB%99%E6%96%87%E7%AB%A0%E6%B7%BB%E5%8A%A0%E2%80%9Ccategories%E2%80%9D%E5%B1%9E%E6%80%A7"><span class="nav-number">4.2.</span> <span class="nav-text">3.2 给文章添加“categories”属性</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E5%85%B3%E4%BA%8Ehexo%E5%A4%9A%E7%BB%88%E7%AB%AF%E5%90%8C%E6%AD%A5%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">5.</span> <span class="nav-text">4.关于hexo多终端同步的问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%E6%9C%AA%E5%BE%85%E5%AE%8C%E7%BB%AD"><span class="nav-number">6.</span> <span class="nav-text">5.未待完续</span></a></li></ol>
     </div>
 </div>
         </aside>
