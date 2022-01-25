@@ -1,5 +1,5 @@
 ---
-title: DOM-day3
+title: DOM-day3-DOM操作重点
 date: 2022-01-18 21:51:46
 tags:
 categories:
@@ -39,7 +39,13 @@ categories:
 #### 属性操作——自定义属性
 
 - 设置
+
+  element.getAttribute()
+
 - 获取
+
+  
+
 - 移除
 
 #### 事件操作
