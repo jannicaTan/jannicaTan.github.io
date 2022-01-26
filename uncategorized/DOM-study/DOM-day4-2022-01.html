@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="JannicaTan">
+    
+    <title>
+        
+            DOM-day4-DOM高级事件 |
+        
+        Jing&#39;s Blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/Watermelon.svg">
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"jannicatan.github.io","root":"/","language":"en","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#FFCC99","avatar":"/images/author.jpeg","favicon":"/images/Watermelon.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg_tangle.png","description":"Keep writing , Keep Studying"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":true},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                Jing&#39;s Blog
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">DOM-day4-DOM高级事件</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/author.jpeg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">JannicaTan</span>
+                        
+                            <span class="author-label">菜鸟前端</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-01-22 11:39:08</span>
+        <span class="mobile">2022-01-22 11:39</span>
+    </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/DOM%E5%AD%A6%E4%B9%A0-day4/">DOM学习-day4</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>1.1k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>4 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h3 id="元素注册事件的两种方式"><a href="#元素注册事件的两种方式" class="headerlink" title="元素注册事件的两种方式"></a>元素注册事件的两种方式</h3><h4 id="1-传统注册事件——on开头"><a href="#1-传统注册事件——on开头" class="headerlink" title="1.传统注册事件——on开头"></a>1.传统注册事件——on开头</h4><p><strong><u>特点</u></strong>:注册时间具有唯一性 同一个元素的同一事件只能设置一个处理函数</p>
+<h4 id="2-事件侦听注册事件——addEventListener-39-事件类型-39-function-useCapture-true-false"><a href="#2-事件侦听注册事件——addEventListener-39-事件类型-39-function-useCapture-true-false" class="headerlink" title="2.事件侦听注册事件——addEventListener(&#39;事件类型&#39;,function(){},useCapture(true/false))"></a>2.事件侦听注册事件——<code>addEventListener(&#39;事件类型&#39;,function()&#123;&#125;,useCapture(true/false))</code></h4><p><strong><u>特点:</u></strong></p>
+<p> (1) 里面的事件类型是字符串 必定<u>加引号</u> 而且不带on</p>
+<p> (2) 同一个元素 同一个事件可以添加多个侦听器（事件处理程序）按顺序执行</p>
+<h3 id="删除事件的两种方式"><a href="#删除事件的两种方式" class="headerlink" title="删除事件的两种方式"></a>删除事件的两种方式</h3><h4 id="1-传统删除事件——元素名-事件类型-null"><a href="#1-传统删除事件——元素名-事件类型-null" class="headerlink" title="1.传统删除事件——元素名.事件类型=null"></a>1.传统删除事件——<code>元素名.事件类型=null</code></h4><h4 id="2-常用——元素名-removeEventListener-39-事件类型-39-注册事件方法名"><a href="#2-常用——元素名-removeEventListener-39-事件类型-39-注册事件方法名" class="headerlink" title="2.常用——元素名.removeEventListener(&#39;事件类型&#39;,注册事件方法名)"></a>2.常用——<code>元素名.removeEventListener(&#39;事件类型&#39;,注册事件方法名)</code></h4><h4 id="3-IE9以下老版本——元素名-detachListener-39-事件类型-39-注册事件方法名"><a href="#3-IE9以下老版本——元素名-detachListener-39-事件类型-39-注册事件方法名" class="headerlink" title="3.IE9以下老版本——元素名.detachListener(&#39;事件类型&#39;,注册事件方法名)"></a>3.IE9以下老版本——<code>元素名.detachListener(&#39;事件类型&#39;,注册事件方法名)</code></h4><h3 id="DOM-事件流的三个阶段"><a href="#DOM-事件流的三个阶段" class="headerlink" title="DOM 事件流的三个阶段"></a>DOM 事件流的三个阶段</h3><h4 id="三个阶段-捕获阶段-gt-当前目标阶段-gt-冒泡阶段"><a href="#三个阶段-捕获阶段-gt-当前目标阶段-gt-冒泡阶段" class="headerlink" title="三个阶段 捕获阶段-&gt;当前目标阶段-&gt;冒泡阶段"></a>三个阶段 <code>捕获阶段-&gt;当前目标阶段-&gt;冒泡阶段</code></h4><p>1.<strong><u>捕获阶段</u></strong>: addEventListener 第三个参数是 true</p>
+<p>顺着从大到小：<code>document -&gt; html -&gt; body -&gt; father -&gt; son </code></p>
+<p>点击相应,其他元素没有这个动作 则点击其他元素不会反应,依次向下寻找</p>
+<p>2.<strong><u>冒泡阶段</u></strong>: addEventListener 第三个参数是 false/省略</p>
+<p>顺着从小到大去找点击响应：<code>son -&gt; father -&gt;body -&gt; html -&gt; document</code></p>
+<h3 id="事件对象——event事件"><a href="#事件对象——event事件" class="headerlink" title="事件对象——event事件"></a>事件对象——event事件</h3><ol>
+<li><p>event 就是一个事件对象 写到我们侦听函数的 小括号里面 当形参来看</p>
+</li>
+<li><p>事件对象只有有了事件才会存在，它是系统给我们自动创建的，不需要我们传递参数</p>
+</li>
+<li><p>事件对象 是 我们事件的一系列相关数据的集合 跟事件相关的,</p>
+<p>​    比如鼠标点击里面就包含了鼠标的相关信息：鼠标坐标</p>
+<p>​    如果是键盘事件里面就包含的键盘事件的信息：判断用户按下了那个键</p>
+</li>
+<li><p>这个事件对象我们可以自己命名 比如 event 、 evt、 e</p>
+</li>
+<li><p>事件对象也有兼容性问题 ie678 </p>
+<p>通过 <code>window.event</code> 兼容性的写法  <code>e = e || window.event</code>;</p>
+</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> div = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;div&#x27;</span>);</span><br><span class="line">div.addEventListener(<span class="string">&#x27;click&#x27;</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(e);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="常见事件对象的属性和方法"><a href="#常见事件对象的属性和方法" class="headerlink" title="常见事件对象的属性和方法"></a>常见事件对象的属性和方法</h3><h4 id="1-e-target——返回的是触发事件的对象（元素）"><a href="#1-e-target——返回的是触发事件的对象（元素）" class="headerlink" title="1.e.target——返回的是触发事件的对象（元素）"></a>1.<code>e.target</code>——返回的是触发事件的对象（元素）</h4><p>与<code>this</code>的区别：</p>
+<ul>
+<li><code>e.target</code> 点击了那个元素，就返回那个元素</li>
+<li><code>this</code> 哪个元素绑定了这个点击事件，那么就返回绑定该事件的元素</li>
+<li><code>e.srcElement</code>:适用于低版本:IE6/7/8</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ul = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;ul&#x27;</span>);</span><br><span class="line">ul.addEventListener(<span class="string">&#x27;click&#x27;</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 我们给ul 绑定了事件  那么this 就指向ul  </span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">this</span>);<span class="comment">//ul</span></span><br><span class="line">  <span class="comment">// e.target 指向我们点击的那个对象 谁触发了这个事件 我们点击的是li e.target 指向的就是li</span></span><br><span class="line">  <span class="built_in">console</span>.log(e.target);<span class="comment">//li</span></span><br><span class="line">  <span class="built_in">console</span>.log(e.currentTarget);</span><br><span class="line">            &#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-e-type——返回当前触发的事件类型"><a href="#2-e-type——返回当前触发的事件类型" class="headerlink" title="2.e.type——返回当前触发的事件类型"></a>2.<code>e.type</code>——返回当前触发的事件类型</h4><h4 id="3-e-preventDefault-——阻止默认行为-事件"><a href="#3-e-preventDefault-——阻止默认行为-事件" class="headerlink" title="3.e.preventDefault()——阻止默认行为(事件)"></a>3.<code>e.preventDefault()</code>——阻止默认行为(事件)</h4><p>实例：</p>
+<ul>
+<li>点击超链接不跳转</li>
+<li>点击提交按钮不提交</li>
+</ul>
+<h4 id="4-重点：e-stopPropagation-——阻止冒泡"><a href="#4-重点：e-stopPropagation-——阻止冒泡" class="headerlink" title="4.重点：e.stopPropagation()——阻止冒泡"></a>4.重点：<code>e.stopPropagation()</code>——阻止冒泡</h4><p>防止在底层事件触发上层事件</p>
+<h3 id="事件委托"><a href="#事件委托" class="headerlink" title="事件委托"></a>事件委托</h3><p>**<u>原理</u>**：给父节点添加侦听器，而不给每个子节点单独设置监听器，利用事件冒泡传到父节点，影响每一个子节点</p>
+<p>**<u>作用</u>**：只操作了一次DOM，提高了效率</p>
+<p>**<u>实例</u>**：为父节点添加操作，用<code>e.target.具体元素内容</code>识别每次操作的子节点</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ul=<span class="built_in">document</span>.querySelector(<span class="string">&#x27;ul&#x27;</span>);</span><br><span class="line">ul.addEventListener(<span class="string">&#x27;click&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">  e.target.style.backgroundColor=<span class="string">&#x27;pink&#x27;</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="鼠标事件对象——MouseEvent"><a href="#鼠标事件对象——MouseEvent" class="headerlink" title="鼠标事件对象——MouseEvent"></a>鼠标事件对象——MouseEvent</h3><p>进行相应的鼠标操作事件(click/onmouseover/onmouseout)后返回对应的坐标位置</p>
+<h4 id="1-e-clientX-e-clientY——可视区坐标"><a href="#1-e-clientX-e-clientY——可视区坐标" class="headerlink" title="1.e.clientX/e.clientY——可视区坐标"></a>1.<code>e.clientX</code>/<code>e.clientY</code>——可视区坐标</h4><h4 id="2-e-pageX-e-pageY——页面文档坐标-滚动页面"><a href="#2-e-pageX-e-pageY——页面文档坐标-滚动页面" class="headerlink" title="2.e.pageX/e.pageY——页面文档坐标(滚动页面)"></a>2.<code>e.pageX</code>/<code>e.pageY</code>——页面文档坐标(滚动页面)</h4><p>滚动页面坐标也会变化的</p>
+<h4 id="3-e-screenX-e-screenY——电脑屏幕坐标"><a href="#3-e-screenX-e-screenY——电脑屏幕坐标" class="headerlink" title="3.e.screenX/e.screenY——电脑屏幕坐标"></a>3.<code>e.screenX</code>/<code>e.screenY</code>——电脑屏幕坐标</h4><p>**<u>案例</u>**：跟随鼠标的图标操作</p>
+<h3 id="键盘事件"><a href="#键盘事件" class="headerlink" title="键盘事件"></a>键盘事件</h3><p>进行相应的键盘操作所反馈的信息，执行顺序为:keydown-&gt;keypress-&gt;keyup</p>
+<p>1.<code>keyup</code>——**<u>按下按键弹起后</u>**触发</p>
+<p>2.<code>keypress</code>——按下按键即触发:<strong><u>无法识别功能键</u></strong></p>
+<p>3.<code>keydown</code>——按下按键即触发:<strong><u>识别功能键</u></strong></p>
+<h3 id="键盘对象——keyCode"><a href="#键盘对象——keyCode" class="headerlink" title="键盘对象——keyCode"></a>键盘对象——<code>keyCode</code></h3><p>激发键盘事件后可以得到相应键的 ASCII码值</p>
+<p>**<u>注意</u>**：</p>
+<ol>
+<li><p>我们的<code>keyup</code> 和<code>keydown</code>事件不区分字母大小写  a 和 A 得到的都是65</p>
+</li>
+<li><p>我们的<code>keypress</code> 事件,区分字母大小写  a  97 和 A 得到的是65</p>
+</li>
+</ol>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>Post title：DOM-day4-DOM高级事件</li>
+        <li>Post author：JannicaTan</li>
+        <li>Create time：2022-01-22 11:39:08</li>
+        <li>
+            Post link：https://jannicatan.github.io/uncategorized/DOM-study/DOM-day4-2022-01.html
+        </li>
+        <li>
+            Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/DOM%E5%AD%A6%E4%B9%A0-day4/">#DOM学习-day4</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/uncategorized/DOM-study/DOM-day3-2022-01.html"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">DOM-day3-DOM操作重点</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2021</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">JannicaTan</a>
+        </div>
+        
+            <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%83%E7%B4%A0%E6%B3%A8%E5%86%8C%E4%BA%8B%E4%BB%B6%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">元素注册事件的两种方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E4%BC%A0%E7%BB%9F%E6%B3%A8%E5%86%8C%E4%BA%8B%E4%BB%B6%E2%80%94%E2%80%94on%E5%BC%80%E5%A4%B4"><span class="nav-number">1.1.</span> <span class="nav-text">1.传统注册事件——on开头</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E4%BA%8B%E4%BB%B6%E4%BE%A6%E5%90%AC%E6%B3%A8%E5%86%8C%E4%BA%8B%E4%BB%B6%E2%80%94%E2%80%94addEventListener-39-%E4%BA%8B%E4%BB%B6%E7%B1%BB%E5%9E%8B-39-function-useCapture-true-false"><span class="nav-number">1.2.</span> <span class="nav-text">2.事件侦听注册事件——addEventListener(&#39;事件类型&#39;,function(){},useCapture(true&#x2F;false))</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E4%BA%8B%E4%BB%B6%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">删除事件的两种方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E4%BC%A0%E7%BB%9F%E5%88%A0%E9%99%A4%E4%BA%8B%E4%BB%B6%E2%80%94%E2%80%94%E5%85%83%E7%B4%A0%E5%90%8D-%E4%BA%8B%E4%BB%B6%E7%B1%BB%E5%9E%8B-null"><span class="nav-number">2.1.</span> <span class="nav-text">1.传统删除事件——元素名.事件类型&#x3D;null</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%B8%B8%E7%94%A8%E2%80%94%E2%80%94%E5%85%83%E7%B4%A0%E5%90%8D-removeEventListener-39-%E4%BA%8B%E4%BB%B6%E7%B1%BB%E5%9E%8B-39-%E6%B3%A8%E5%86%8C%E4%BA%8B%E4%BB%B6%E6%96%B9%E6%B3%95%E5%90%8D"><span class="nav-number">2.2.</span> <span class="nav-text">2.常用——元素名.removeEventListener(&#39;事件类型&#39;,注册事件方法名)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-IE9%E4%BB%A5%E4%B8%8B%E8%80%81%E7%89%88%E6%9C%AC%E2%80%94%E2%80%94%E5%85%83%E7%B4%A0%E5%90%8D-detachListener-39-%E4%BA%8B%E4%BB%B6%E7%B1%BB%E5%9E%8B-39-%E6%B3%A8%E5%86%8C%E4%BA%8B%E4%BB%B6%E6%96%B9%E6%B3%95%E5%90%8D"><span class="nav-number">2.3.</span> <span class="nav-text">3.IE9以下老版本——元素名.detachListener(&#39;事件类型&#39;,注册事件方法名)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM-%E4%BA%8B%E4%BB%B6%E6%B5%81%E7%9A%84%E4%B8%89%E4%B8%AA%E9%98%B6%E6%AE%B5"><span class="nav-number">3.</span> <span class="nav-text">DOM 事件流的三个阶段</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%89%E4%B8%AA%E9%98%B6%E6%AE%B5-%E6%8D%95%E8%8E%B7%E9%98%B6%E6%AE%B5-gt-%E5%BD%93%E5%89%8D%E7%9B%AE%E6%A0%87%E9%98%B6%E6%AE%B5-gt-%E5%86%92%E6%B3%A1%E9%98%B6%E6%AE%B5"><span class="nav-number">3.1.</span> <span class="nav-text">三个阶段 捕获阶段-&gt;当前目标阶段-&gt;冒泡阶段</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1%E2%80%94%E2%80%94event%E4%BA%8B%E4%BB%B6"><span class="nav-number">4.</span> <span class="nav-text">事件对象——event事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95"><span class="nav-number">5.</span> <span class="nav-text">常见事件对象的属性和方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-e-target%E2%80%94%E2%80%94%E8%BF%94%E5%9B%9E%E7%9A%84%E6%98%AF%E8%A7%A6%E5%8F%91%E4%BA%8B%E4%BB%B6%E7%9A%84%E5%AF%B9%E8%B1%A1%EF%BC%88%E5%85%83%E7%B4%A0%EF%BC%89"><span class="nav-number">5.1.</span> <span class="nav-text">1.e.target——返回的是触发事件的对象（元素）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-e-type%E2%80%94%E2%80%94%E8%BF%94%E5%9B%9E%E5%BD%93%E5%89%8D%E8%A7%A6%E5%8F%91%E7%9A%84%E4%BA%8B%E4%BB%B6%E7%B1%BB%E5%9E%8B"><span class="nav-number">5.2.</span> <span class="nav-text">2.e.type——返回当前触发的事件类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-e-preventDefault-%E2%80%94%E2%80%94%E9%98%BB%E6%AD%A2%E9%BB%98%E8%AE%A4%E8%A1%8C%E4%B8%BA-%E4%BA%8B%E4%BB%B6"><span class="nav-number">5.3.</span> <span class="nav-text">3.e.preventDefault()——阻止默认行为(事件)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E9%87%8D%E7%82%B9%EF%BC%9Ae-stopPropagation-%E2%80%94%E2%80%94%E9%98%BB%E6%AD%A2%E5%86%92%E6%B3%A1"><span class="nav-number">5.4.</span> <span class="nav-text">4.重点：e.stopPropagation()——阻止冒泡</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98"><span class="nav-number">6.</span> <span class="nav-text">事件委托</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%BC%A0%E6%A0%87%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1%E2%80%94%E2%80%94MouseEvent"><span class="nav-number">7.</span> <span class="nav-text">鼠标事件对象——MouseEvent</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-e-clientX-e-clientY%E2%80%94%E2%80%94%E5%8F%AF%E8%A7%86%E5%8C%BA%E5%9D%90%E6%A0%87"><span class="nav-number">7.1.</span> <span class="nav-text">1.e.clientX&#x2F;e.clientY——可视区坐标</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-e-pageX-e-pageY%E2%80%94%E2%80%94%E9%A1%B5%E9%9D%A2%E6%96%87%E6%A1%A3%E5%9D%90%E6%A0%87-%E6%BB%9A%E5%8A%A8%E9%A1%B5%E9%9D%A2"><span class="nav-number">7.2.</span> <span class="nav-text">2.e.pageX&#x2F;e.pageY——页面文档坐标(滚动页面)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-e-screenX-e-screenY%E2%80%94%E2%80%94%E7%94%B5%E8%84%91%E5%B1%8F%E5%B9%95%E5%9D%90%E6%A0%87"><span class="nav-number">7.3.</span> <span class="nav-text">3.e.screenX&#x2F;e.screenY——电脑屏幕坐标</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%94%AE%E7%9B%98%E4%BA%8B%E4%BB%B6"><span class="nav-number">8.</span> <span class="nav-text">键盘事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%94%AE%E7%9B%98%E5%AF%B9%E8%B1%A1%E2%80%94%E2%80%94keyCode"><span class="nav-number">9.</span> <span class="nav-text">键盘对象——keyCode</span></a></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+
+    
+<script src="/js/code-copy.js"></script>
+
+
+
+
+    
+<script src="/js/lazyload.js"></script>
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/left-side-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
+    
+</div>
+
+
+
+</body>
+</html>
