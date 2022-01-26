@@ -1,5 +1,5 @@
 ---
-title: DOM_day2
+title: DOM_day2-自定义属性/节点操作
 date: 2022-01-17 11:21:02
 tags: DOM学习-day2
 categories: DOM学习
