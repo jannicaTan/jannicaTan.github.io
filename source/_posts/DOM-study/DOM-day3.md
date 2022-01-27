@@ -2,7 +2,7 @@
 title: DOM-day3-DOM操作重点
 date: 2022-01-18 21:51:46
 tags: DOM学习-day3
-categories:
+categories: DOM学习
 ---
 
 ## 三种动态创建元素区别-经典面试题

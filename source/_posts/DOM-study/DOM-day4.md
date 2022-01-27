@@ -2,7 +2,7 @@
 title: DOM-day4-DOM高级事件
 date: 2022-01-22 11:39:08
 tags: DOM学习-day4
-categories:
+categories: DOM学习
 ---
 
 
