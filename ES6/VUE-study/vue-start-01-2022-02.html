@@ -9,7 +9,7 @@
     
     <title>
         
-            Category |
+            ES6-01-初始化 |
         
         Jing&#39;s Blog
     </title>
@@ -77,7 +77,7 @@
                         </li>
                     
                         <li class="menu-item">
-                            <a class="active"
+                            <a class=""
                                href="/categories"
                             >
                                 CATEGORIES
@@ -124,7 +124,7 @@
                 </li>
             
                 <li class="drawer-menu-item flex-center">
-                    <a class="active"
+                    <a class=""
                        href="/categories">CATEGORIES</a>
                 </li>
             
@@ -149,13 +149,201 @@
 
                 
                     <div class="fade-in-down-animation">
-    <div class="category-list-container">
-        <div class="category-list-content">
-            <ul class="all-category-list"><li class="all-category-list-item"><a class="all-category-list-link" href="/categories/DOM%E5%AD%A6%E4%B9%A0/">DOM学习</a><span class="all-category-list-count">5</span></li><li class="all-category-list-item"><a class="all-category-list-link" href="/categories/ES6/">ES6</a><span class="all-category-list-count">3</span></li><li class="all-category-list-item"><a class="all-category-list-link" href="/categories/Hexo/">Hexo</a><span class="all-category-list-count">1</span></li><li class="all-category-list-item"><a class="all-category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="all-category-list-count">1</span></li></ul>
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">ES6-01-初始化</span>
         </div>
-        <div class="category-comments">
-            
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/author.jpeg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">JannicaTan</span>
+                        
+                            <span class="author-label">初级前端</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-02-10 17:53:43</span>
+        <span class="mobile">2022-02-10 17:53</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/ES6/">ES6</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/ES6/">ES6</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>255 Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>1 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h2 id="1-ES6初始化"><a href="#1-ES6初始化" class="headerlink" title="1.ES6初始化"></a>1.ES6初始化</h2><p>1.1 模块化ES6(<code>node version&gt;14.15.1</code>)</p>
+<ul>
+<li>快速初始化包管理配置文件</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init -p</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>生成package.json文件</li>
+<li>在其中添加</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;type&quot;</span>: module</span><br></pre></td></tr></table></figure>
+
+<p>1.2 ES6模块化基本语法</p>
+<ul>
+<li><p>默认导出与默认导入</p>
+<ul>
+<li><p>默认导出</p>
+<ul>
+<li>```js<br>export default {导出对象}<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  - 目的:挂载使外界能够访问导出的对象</span><br><span class="line"></span><br><span class="line">  - ⚠️注意：只允许使用唯一的一次export default</span><br><span class="line"></span><br><span class="line">- 默认导入</span><br><span class="line"></span><br><span class="line">  - ```js</span><br><span class="line">    import 自定义变量名称 from ‘模块标识符/文件路径.js’</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>直接导入</p>
+<ul>
+<li>导入的时候直接import js文件路径 即可</li>
+</ul>
+</li>
+<li><p>按需导入与导出</p>
+<ul>
+<li><p>按需导出</p>
+<ul>
+<li><pre><code class="js">export 导出的变量
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>按需导入</p>
+<ul>
+<li>import {按需导出的对应名称1,名称2….} from 对应js文件</li>
+</ul>
+</li>
+<li><p>⚠️ 注意事项：</p>
+<p>  1.可以多次按需导出</p>
+<p>  2.按需导入的名称要与按需导出的名称保持一致</p>
+<p>  3.可以使用as 重命名名称 进行重命名</p>
+<p>  4.按需导入可以与默认导入一起</p>
+</li>
+</ul>
+</li>
+</ul>
+
         </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>Post title：ES6-01-初始化</li>
+        <li>Post author：JannicaTan</li>
+        <li>Create time：2022-02-10 17:53:43</li>
+        <li>
+            Post link：https://jannicatan.github.io/ES6/VUE-study/vue-start-01-2022-02.html
+        </li>
+        <li>
+            Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/ES6/">#ES6</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/ES6/VUE-study/vue-start-02-2022-02.html"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">ES6-02-Promise/aysnc</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/DOM%E5%AD%A6%E4%B9%A0/DOM-study/DOM-day5-2022-01.html"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">DOM-day5：PC端网页特效</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
     </div>
 </div>
 
@@ -203,6 +391,23 @@
     </div>
 
     
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
 
     <div class="right-bottom-side-tools">
         <div class="side-tools-container">
@@ -247,6 +452,14 @@
 
     </div>
 
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-ES6%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">1.</span> <span class="nav-text">1.ES6初始化</span></a></li></ol>
+    </div>
+</div>
+        </aside>
     
 
     <div class="image-viewer-container">
@@ -320,6 +533,14 @@
 
 
 <div class="post-scripts">
+    
+        
+<script src="/js/left-side-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
     
 </div>
 

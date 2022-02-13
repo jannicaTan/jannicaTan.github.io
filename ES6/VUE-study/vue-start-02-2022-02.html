@@ -9,7 +9,7 @@
     
     <title>
         
-            DOM-day3-DOM操作重点 |
+            ES6-02-Promise/aysnc |
         
         Jing&#39;s Blog
     </title>
@@ -152,7 +152,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">DOM-day3-DOM操作重点</span>
+            <span class="title-hover-animation">ES6-02-Promise/aysnc</span>
         </div>
 
         
@@ -164,16 +164,27 @@
                     <div class="author">
                         <span class="name">JannicaTan</span>
                         
-                            <span class="author-label">菜鸟前端</span>
+                            <span class="author-label">初级前端</span>
                         
                     </div>
                     <div class="meta-info">
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fas fa-edit"></i>&nbsp;
-        <span class="pc">2022-01-18 21:51:46</span>
-        <span class="mobile">2022-01-18 21:51</span>
+        <span class="pc">2022-02-11 20:18:52</span>
+        <span class="mobile">2022-02-11 20:18</span>
     </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/ES6/">ES6</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
     
     
         <span class="article-tags article-meta-item">
@@ -181,7 +192,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/DOM%E5%AD%A6%E4%B9%A0-day3/">DOM学习-day3</a>&nbsp;
+                        <a href="/tags/Promise/">Promise</a>&nbsp;
                     </li>
                 
             </ul>
@@ -191,7 +202,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>105 Words</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>46 Words</span>
         </span>
     
     
@@ -212,38 +223,27 @@
         
 
         <div class="article-content markdown-body">
-            <h2 id="三种动态创建元素区别-经典面试题"><a href="#三种动态创建元素区别-经典面试题" class="headerlink" title="三种动态创建元素区别-经典面试题"></a>三种动态创建元素区别-经典面试题</h2><h3 id="document-write"><a href="#document-write" class="headerlink" title="document.write()"></a>document.write()</h3><h3 id="element-innerHTML"><a href="#element-innerHTML" class="headerlink" title="element.innerHTML"></a>element.innerHTML</h3><h3 id="document-createElement"><a href="#document-createElement" class="headerlink" title="document.createElement()"></a>document.createElement()</h3><h2 id="DOM重点核心"><a href="#DOM重点核心" class="headerlink" title="DOM重点核心"></a>DOM重点核心</h2><h3 id="DOM操作"><a href="#DOM操作" class="headerlink" title="DOM操作"></a>DOM操作</h3><h4 id="创建——3个"><a href="#创建——3个" class="headerlink" title="创建——3个"></a>创建——3个</h4><h4 id="增加——2个"><a href="#增加——2个" class="headerlink" title="增加——2个"></a>增加——2个</h4><h4 id="删除——1个"><a href="#删除——1个" class="headerlink" title="删除——1个"></a>删除——1个</h4><h4 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h4><ul>
-<li>修改元素属性:</li>
-<li>修改元素内容:</li>
-<li>修改表单元素:</li>
-<li>修改元素样式:</li>
+            <h2 id="关于读取文件"><a href="#关于读取文件" class="headerlink" title="关于读取文件"></a>关于读取文件</h2><p>1.then-fs第三方包</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install then-fs</span><br><span class="line"><span class="keyword">import</span> thenFs <span class="keyword">from</span> then-fs</span><br></pre></td></tr></table></figure>
+
+<p>2.fs自带包</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import fs from fs</span><br></pre></td></tr></table></figure>
+
+<h2 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h2><ul>
+<li>Promise是一个构造函数</li>
 </ul>
-<h4 id="查——3类"><a href="#查——3类" class="headerlink" title="查——3类"></a>查——3类</h4><ul>
-<li>DOM API</li>
-<li>H5 新方法：</li>
-<li>利用节点操作获取元素:</li>
-</ul>
-<h4 id="属性操作——自定义属性"><a href="#属性操作——自定义属性" class="headerlink" title="属性操作——自定义属性"></a>属性操作——自定义属性</h4><ul>
-<li><p>设置</p>
-<p>element.getAttribute()</p>
-</li>
-<li><p>获取</p>
-</li>
-<li><p>移除</p>
-</li>
-</ul>
-<h4 id="事件操作"><a href="#事件操作" class="headerlink" title="事件操作"></a>事件操作</h4>
+<h4 id="Promise中catch用法"><a href="#Promise中catch用法" class="headerlink" title="Promise中catch用法"></a>Promise中catch用法</h4><h4 id="Promise-all"><a href="#Promise-all" class="headerlink" title="Promise.all()"></a>Promise.all()</h4><h4 id="Promise-race"><a href="#Promise-race" class="headerlink" title="Promise.race()"></a>Promise.race()</h4>
         </div>
 
         
             <div class="post-copyright-info">
                 <div class="article-copyright-info-container">
     <ul>
-        <li>Post title：DOM-day3-DOM操作重点</li>
+        <li>Post title：ES6-02-Promise/aysnc</li>
         <li>Post author：JannicaTan</li>
-        <li>Create time：2022-01-18 21:51:46</li>
+        <li>Create time：2022-02-11 20:18:52</li>
         <li>
-            Post link：https://jannicatan.github.io/uncategorized/DOM-study/DOM-day3-2022-01.html
+            Post link：https://jannicatan.github.io/ES6/VUE-study/vue-start-02-2022-02.html
         </li>
         <li>
             Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
@@ -258,7 +258,7 @@
             <ul class="post-tags-box">
                 
                     <li class="tag-item">
-                        <a href="/tags/DOM%E5%AD%A6%E4%B9%A0-day3/">#DOM学习-day3</a>&nbsp;
+                        <a href="/tags/Promise/">#Promise</a>&nbsp;
                     </li>
                 
             </ul>
@@ -270,13 +270,13 @@
                     <div class="article-prev">
                         <a class="prev"
                            rel="prev"
-                           href="/uncategorized/DOM-study/DOM-day4-2022-01.html"
+                           href="/ES6/VUE-study/vue-start-03-2022-02.html"
                         >
                             <span class="left arrow-icon flex-center">
                               <i class="fas fa-chevron-left"></i>
                             </span>
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">DOM-day4-DOM高级事件</span>
+                                <span class="post-nav-title-item">ES6-EventLoop/宏任务和微任务</span>
                                 <span class="post-nav-item">Prev posts</span>
                             </span>
                         </a>
@@ -286,10 +286,10 @@
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/DOM%E5%AD%A6%E4%B9%A0/DOM-study/DOM-day2-2022-01.html"
+                           href="/ES6/VUE-study/vue-start-01-2022-02.html"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">DOM_day2-自定义属性/节点操作</span>
+                                <span class="post-nav-title-item">ES6-01-初始化</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -414,7 +414,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E7%A7%8D%E5%8A%A8%E6%80%81%E5%88%9B%E5%BB%BA%E5%85%83%E7%B4%A0%E5%8C%BA%E5%88%AB-%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">三种动态创建元素区别-经典面试题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#document-write"><span class="nav-number">1.1.</span> <span class="nav-text">document.write()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#element-innerHTML"><span class="nav-number">1.2.</span> <span class="nav-text">element.innerHTML</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#document-createElement"><span class="nav-number">1.3.</span> <span class="nav-text">document.createElement()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM%E9%87%8D%E7%82%B9%E6%A0%B8%E5%BF%83"><span class="nav-number">2.</span> <span class="nav-text">DOM重点核心</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM%E6%93%8D%E4%BD%9C"><span class="nav-number">2.1.</span> <span class="nav-text">DOM操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E2%80%94%E2%80%943%E4%B8%AA"><span class="nav-number">2.1.1.</span> <span class="nav-text">创建——3个</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A2%9E%E5%8A%A0%E2%80%94%E2%80%942%E4%B8%AA"><span class="nav-number">2.1.2.</span> <span class="nav-text">增加——2个</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E2%80%94%E2%80%941%E4%B8%AA"><span class="nav-number">2.1.3.</span> <span class="nav-text">删除——1个</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9"><span class="nav-number">2.1.4.</span> <span class="nav-text">修改</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%A5%E2%80%94%E2%80%943%E7%B1%BB"><span class="nav-number">2.1.5.</span> <span class="nav-text">查——3类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7%E6%93%8D%E4%BD%9C%E2%80%94%E2%80%94%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7"><span class="nav-number">2.1.6.</span> <span class="nav-text">属性操作——自定义属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="nav-number">2.1.7.</span> <span class="nav-text">事件操作</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6"><span class="nav-number">1.</span> <span class="nav-text">关于读取文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Promise"><span class="nav-number">2.</span> <span class="nav-text">Promise</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Promise%E4%B8%ADcatch%E7%94%A8%E6%B3%95"><span class="nav-number">2.0.1.</span> <span class="nav-text">Promise中catch用法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Promise-all"><span class="nav-number">2.0.2.</span> <span class="nav-text">Promise.all()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Promise-race"><span class="nav-number">2.0.3.</span> <span class="nav-text">Promise.race()</span></a></li></ol></li></ol></li></ol>
     </div>
 </div>
         </aside>
