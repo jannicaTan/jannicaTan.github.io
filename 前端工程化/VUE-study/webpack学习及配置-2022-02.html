@@ -9,7 +9,7 @@
     
     <title>
         
-            ES6-EventLoop/宏任务和微任务 |
+            Webpack基础配置(待继续更新) |
         
         Jing&#39;s Blog
     </title>
@@ -152,7 +152,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">ES6-EventLoop/宏任务和微任务</span>
+            <span class="title-hover-animation">Webpack基础配置(待继续更新)</span>
         </div>
 
         
@@ -171,8 +171,8 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fas fa-edit"></i>&nbsp;
-        <span class="pc">2022-02-13 21:13:42</span>
-        <span class="mobile">2022-02-13 21:13</span>
+        <span class="pc">2022-02-23 20:22:24</span>
+        <span class="mobile">2022-02-23 20:22</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -180,7 +180,7 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/ES6/">ES6</a>&nbsp;
+                        <a href="/categories/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/">前端工程化</a>&nbsp;
                     </li>
                 
             </ul>
@@ -192,7 +192,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/EventLoop/">EventLoop</a>&nbsp;
+                        <a href="/tags/Webpack/">Webpack</a>&nbsp;
                     </li>
                 
             </ul>
@@ -202,12 +202,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>36 Words</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>566 Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fas fa-clock"></i>&nbsp;<span>1 Mins</span>
+            <i class="fas fa-clock"></i>&nbsp;<span>2 Mins</span>
         </span>
     
     
@@ -223,24 +223,134 @@
         
 
         <div class="article-content markdown-body">
-            <h2 id="同步任务和异步任务的执行顺序"><a href="#同步任务和异步任务的执行顺序" class="headerlink" title="同步任务和异步任务的执行顺序"></a>同步任务和异步任务的执行顺序</h2><h4 id="JS执行顺序"><a href="#JS执行顺序" class="headerlink" title="JS执行顺序"></a>JS执行顺序</h4><p><img  
+            <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="../../../../../Study-TensorFlow/Study-NLP/IMGassset/JS%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F.webp"
-                      alt="JS执行顺序"
+                     data-src="https://raw.githubusercontent.com/jannicaTan/image_picX/master/VUE-Study/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96%E2%80%94%E2%80%94Webpack.webp"
+                      alt="前端工程化——Webpack"
                 ></p>
-<h4 id="JS任务分类"><a href="#JS任务分类" class="headerlink" title="JS任务分类"></a>JS任务分类</h4><p><img  
+<ul>
+<li><h3 id="前端工程化"><a href="#前端工程化" class="headerlink" title="前端工程化"></a>前端工程化</h3><ul>
+<li><h4 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h4><ul>
+<li>js 的模块化、css 的模块化、资源的模块化</li>
+</ul>
+</li>
+<li><h4 id="组件化"><a href="#组件化" class="headerlink" title="组件化"></a>组件化</h4><ul>
+<li>复用现有的 UI 结构、样式、行为</li>
+</ul>
+</li>
+<li><h4 id="规范化"><a href="#规范化" class="headerlink" title="规范化"></a>规范化</h4><ul>
+<li>目录结构的划分、编码规范化、接口规范化、文档规范化、 Git 分支管理</li>
+</ul>
+</li>
+<li><h4 id="自动化"><a href="#自动化" class="headerlink" title="自动化"></a>自动化</h4><ul>
+<li>自动化构建、自动部署、自动化测试</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3 id="Webpack"><a href="#Webpack" class="headerlink" title="Webpack"></a>Webpack</h3><ul>
+<li><h4 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h4><ul>
+<li>webpack 是前端项目工程化的具体解决方案。提供了友好的前端模块化开发支持，以及代码压缩混淆、处理浏览器端 JavaScript 的兼容性、性能优化等强大的功能。让程序员把工作的重心放到具体功能的实现上，提高了前端开发效率和项目的可维护性。</li>
+</ul>
+</li>
+<li><h4 id="webpack全局安装"><a href="#webpack全局安装" class="headerlink" title="webpack全局安装"></a>webpack全局安装</h4><ul>
+<li>npm install webpack webpack-cli -D</li>
+</ul>
+</li>
+<li><h4 id="webpack配置项"><a href="#webpack配置项" class="headerlink" title="webpack配置项"></a>webpack配置项</h4><ul>
+<li><p>在webpack.config.js中进行配置</p>
+</li>
+<li><p>webpack的基本配置项及插件配置<img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/jannicaTan/image_picX/master/ES6/JS%E4%BB%BB%E5%8A%A1%E5%88%86%E7%B1%BB.webp"
-                      alt="JS任务分类"
+                     data-src="https://api2.mubu.com/v3/document_image/672bcb5a-142d-4521-83f4-b18e96122f07-17016005.jpg"
+                      alt="img"
                 ></p>
-<h4 id="微任务与宏任务的执行顺序"><a href="#微任务与宏任务的执行顺序" class="headerlink" title="微任务与宏任务的执行顺序"></a>微任务与宏任务的执行顺序</h4><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/jannicaTan/image_picX/master/ES6/%E5%BE%AE%E4%BB%BB%E5%8A%A1%E4%B8%8E%E5%AE%8F%E4%BB%BB%E5%8A%A1%E7%9A%84%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F.webp"
-                      alt="微任务与宏任务的执行顺序"
-                ></p>
+</li>
+<li><h5 id="基本配置项"><a href="#基本配置项" class="headerlink" title="基本配置项"></a>基本配置项</h5><ul>
+<li><p>mode</p>
+<ul>
+<li><p> ① development — 开发环境 </p>
+</li>
+<li><p>不会对打包生成的文件进行代码压缩和性能优化 </p>
+</li>
+<li><p>打包速度快，适合在开发阶段使用</p>
+</li>
+<li><p> ② production ——生产环境 </p>
+</li>
+<li><p> 会对打包生成的文件进行代码压缩和性能优化 </p>
+</li>
+<li><p>打包速度很慢，仅适合在项目发布阶段使用</p>
+</li>
+</ul>
+</li>
+<li><p>entry/output</p>
+<ul>
+<li>通过 entry 节点指定打包的入口。通过 output 节点指定打包的出口</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h5 id="插件配置项"><a href="#插件配置项" class="headerlink" title="插件配置项"></a>插件配置项</h5><ul>
+<li><p>1 webpack-dev-server</p>
+<ul>
+<li>让 webpack 监听项目源代码的变化，从而进行自动打包构建。</li>
+</ul>
+</li>
+<li><p>2 html-webpack-plugin</p>
+<ul>
+<li>通过 html-webpack-plugin 插件，将 src 目录下的 index.html 首页，复制到项目根目录中一份,将页面放入到内存中</li>
+</ul>
+</li>
+<li><p>3 devServer</p>
+<ul>
+<li>控制打包后是否自动打开/访问路径/自定义端口号</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h5 id="loader加载"><a href="#loader加载" class="headerlink" title="loader加载"></a>loader加载</h5><ul>
+<li><p>打包处理css</p>
+</li>
+<li><p>打包处理less</p>
+</li>
+<li><p>打包处理路径图片</p>
+</li>
+<li><p>打包处理高级JS语法</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h4 id="SourceMap"><a href="#SourceMap" class="headerlink" title="SourceMap"></a>SourceMap</h4><ul>
+<li><p>作用：<br>精准定位到错误行并显示对应的源码 方便开发者调试源码中的错误</p>
+</li>
+<li><p>开发实践</p>
+<ul>
+<li><p>① 开发环境下：</p>
+<ul>
+<li><p>把 devtool 的值设置为 eval-source-map</p>
+</li>
+<li><p>好处：可以精准定位到具体的错误行</p>
+</li>
+</ul>
+</li>
+<li><p>② 生产环境下：</p>
+<ul>
+<li><p>建议关闭 Source Map 或将 devtool 的值设置为 nosources-source-map</p>
+</li>
+<li><p>好处：防止源码泄露，提高网站的安全性</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
         </div>
 
@@ -248,11 +358,11 @@
             <div class="post-copyright-info">
                 <div class="article-copyright-info-container">
     <ul>
-        <li>Post title：ES6-EventLoop/宏任务和微任务</li>
+        <li>Post title：Webpack基础配置(待继续更新)</li>
         <li>Post author：JannicaTan</li>
-        <li>Create time：2022-02-13 21:13:42</li>
+        <li>Create time：2022-02-23 20:22:24</li>
         <li>
-            Post link：https://jannicatan.github.io/ES6/VUE-study/vue-start-03-2022-02.html
+            Post link：https://jannicatan.github.io/前端工程化/VUE-study/webpack学习及配置-2022-02.html
         </li>
         <li>
             Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
@@ -267,7 +377,7 @@
             <ul class="post-tags-box">
                 
                     <li class="tag-item">
-                        <a href="/tags/EventLoop/">#EventLoop</a>&nbsp;
+                        <a href="/tags/Webpack/">#Webpack</a>&nbsp;
                     </li>
                 
             </ul>
@@ -279,13 +389,13 @@
                     <div class="article-prev">
                         <a class="prev"
                            rel="prev"
-                           href="/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/VUE-study/webpack%E5%AD%A6%E4%B9%A0%E5%8F%8A%E9%85%8D%E7%BD%AE-2022-02.html"
+                           href="/Interview/interview/20220225-2022-02.html"
                         >
                             <span class="left arrow-icon flex-center">
                               <i class="fas fa-chevron-left"></i>
                             </span>
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">Webpack基础配置(待继续更新)</span>
+                                <span class="post-nav-title-item">连等赋值问题</span>
                                 <span class="post-nav-item">Prev posts</span>
                             </span>
                         </a>
@@ -295,10 +405,10 @@
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/ES6/VUE-study/vue-start-02-2022-02.html"
+                           href="/ES6/VUE-study/vue-start-03-2022-02.html"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">ES6-02-Promise/aysnc</span>
+                                <span class="post-nav-title-item">ES6-EventLoop/宏任务和微任务</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -423,7 +533,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8C%E6%AD%A5%E4%BB%BB%E5%8A%A1%E5%92%8C%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E7%9A%84%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F"><span class="nav-number">1.</span> <span class="nav-text">同步任务和异步任务的执行顺序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#JS%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F"><span class="nav-number">1.0.1.</span> <span class="nav-text">JS执行顺序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JS%E4%BB%BB%E5%8A%A1%E5%88%86%E7%B1%BB"><span class="nav-number">1.0.2.</span> <span class="nav-text">JS任务分类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BE%AE%E4%BB%BB%E5%8A%A1%E4%B8%8E%E5%AE%8F%E4%BB%BB%E5%8A%A1%E7%9A%84%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F"><span class="nav-number">1.0.3.</span> <span class="nav-text">微任务与宏任务的执行顺序</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96"><span class="nav-number">1.</span> <span class="nav-text">前端工程化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A8%A1%E5%9D%97%E5%8C%96"><span class="nav-number">1.1.</span> <span class="nav-text">模块化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%84%E4%BB%B6%E5%8C%96"><span class="nav-number">1.2.</span> <span class="nav-text">组件化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%84%E8%8C%83%E5%8C%96"><span class="nav-number">1.3.</span> <span class="nav-text">规范化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E5%8C%96"><span class="nav-number">1.4.</span> <span class="nav-text">自动化</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Webpack"><span class="nav-number">2.</span> <span class="nav-text">Webpack</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5"><span class="nav-number">2.1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#webpack%E5%85%A8%E5%B1%80%E5%AE%89%E8%A3%85"><span class="nav-number">2.2.</span> <span class="nav-text">webpack全局安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#webpack%E9%85%8D%E7%BD%AE%E9%A1%B9"><span class="nav-number">2.3.</span> <span class="nav-text">webpack配置项</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E9%A1%B9"><span class="nav-number">2.3.1.</span> <span class="nav-text">基本配置项</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%8F%92%E4%BB%B6%E9%85%8D%E7%BD%AE%E9%A1%B9"><span class="nav-number">2.3.2.</span> <span class="nav-text">插件配置项</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#loader%E5%8A%A0%E8%BD%BD"><span class="nav-number">2.3.3.</span> <span class="nav-text">loader加载</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SourceMap"><span class="nav-number">2.4.</span> <span class="nav-text">SourceMap</span></a></li></ol></li></ol>
     </div>
 </div>
         </aside>
