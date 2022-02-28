@@ -9,7 +9,7 @@
     
     <title>
         
-            连等赋值问题 |
+            vue基础——特性/指令/过滤器/侦听器/计算属性 |
         
         Jing&#39;s Blog
     </title>
@@ -152,7 +152,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">连等赋值问题</span>
+            <span class="title-hover-animation">vue基础——特性/指令/过滤器/侦听器/计算属性</span>
         </div>
 
         
@@ -171,8 +171,8 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fas fa-edit"></i>&nbsp;
-        <span class="pc">2022-02-25 16:20:41</span>
-        <span class="mobile">2022-02-25 16:20</span>
+        <span class="pc">2022-02-27 21:56:37</span>
+        <span class="mobile">2022-02-27 21:56</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -180,7 +180,7 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/Interview/">Interview</a>&nbsp;
+                        <a href="/categories/VUE/">VUE</a>&nbsp;
                     </li>
                 
             </ul>
@@ -192,7 +192,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/javascript/">javascript</a>&nbsp;
+                        <a href="/tags/VUE/">VUE</a>&nbsp;
                     </li>
                 
             </ul>
@@ -202,12 +202,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>721 Words</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>1.4k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fas fa-clock"></i>&nbsp;<span>2 Mins</span>
+            <i class="fas fa-clock"></i>&nbsp;<span>5 Mins</span>
         </span>
     
     
@@ -223,65 +223,262 @@
         
 
         <div class="article-content markdown-body">
-            <p>坐着突然看到一个题，想了一下答错了，看了题解之后还是不太理解，终于在一个大佬的白话中get到卡住的点！</p>
-<p>解答地址：<a class="link"   target="_blank" rel="noopener" href="https://segmentfault.com/q/1010000002637728" >https://segmentfault.com/q/1010000002637728<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="1-赋值表达式的概念："><a href="#1-赋值表达式的概念：" class="headerlink" title="1.赋值表达式的概念："></a>1.赋值表达式的概念：</h3><p>计算一般的赋值表达式<code> A = B</code>按如下步骤：</p>
-<ol>
-<li>计算表达式A，得到一个引用<code>refA</code>；</li>
-<li>计算表达式B，得到一个值<code>valueB</code>；</li>
-<li>将<code>valueB</code>赋给<code>refA</code>指向的名称绑定；</li>
-<li>返回<code>valueB</code>。‘</li>
-</ol>
-<h3 id="连等的核心思想："><a href="#连等的核心思想：" class="headerlink" title="连等的核心思想："></a>连等的核心思想：</h3><p>连等是先确定<strong>所有</strong>变量的指针，再让指针指向那个赋值</p>
-<h3 id="对于题1"><a href="#对于题1" class="headerlink" title="对于题1:"></a>对于题1:</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> <span class="keyword">var</span> a = b =<span class="number">10</span>;</span><br><span class="line"><span class="number">2</span>      (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="number">3</span>          <span class="keyword">var</span> a = b = <span class="number">20</span>;</span><br><span class="line"><span class="number">4</span>       &#125;)();</span><br><span class="line"><span class="number">5</span> <span class="built_in">console</span>.log(a);</span><br><span class="line"><span class="number">6</span> <span class="built_in">console</span>.log(b);</span><br><span class="line"><span class="comment">//问：输出的 a = ?    b = ?</span></span><br><span class="line"><span class="comment">//10 20</span></span><br></pre></td></tr></table></figure>
-
+            <h2 id="VUE特性"><a href="#VUE特性" class="headerlink" title="VUE特性"></a>VUE特性</h2><ul>
+<li><p>① 数据驱动视图：</p>
 <ul>
-<li>首先第一行的 var a = b = 10; 就是用了连等操作符，连等操作符是<strong>从右向左的</strong> 所以类似于b = 10; a = b;或者是 a = (b = 10);<ul>
-<li>此时，变量<strong>a</strong>是用<strong>var</strong>进行声明并赋值的所以是<strong>局部变量</strong>，</li>
-<li>但是b是未声明而直接进行赋值的所以是<strong>全局变量</strong>。</li>
-</ul>
+<li><p>优点：当页面数据发生变化时，页面会自动重新渲染页面的结构</p>
 </li>
-<li>第二行开始使用匿名函数实现模仿块级作用于（私有作用域）:<strong><u>在里面声明的变量会在函数结束后被销毁除非被外部所使用</u></strong></li>
-<li>第三行，先使用外部局部变量b，b =20; 然后又**<u>重新声明了一个变量a</u>**<ul>
-<li>此时内部的局部新生成的a为20</li>
-</ul>
-</li>
-<li>第四行声明定义一个匿名函数后随即执行，**<u>私有作用域中创建的变量a在结束后随即被销毁</u>**.所以最后改变的只有外部的变量b的值.<ul>
-<li>此时b=20 ,a还是为之前外部的10</li>
-</ul>
+<li><p>⚠️注意：数据驱动视图是单向的数据绑定。</p>
 </li>
 </ul>
-<h3 id="对于题2"><a href="#对于题2" class="headerlink" title="对于题2:"></a>对于题2:</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> <span class="keyword">var</span> a = &#123;<span class="attr">n</span>: <span class="number">1</span>&#125;;</span><br><span class="line"><span class="number">2</span> <span class="keyword">var</span> b = a;</span><br><span class="line"><span class="number">3</span> a.x = a = &#123;<span class="attr">n</span>: <span class="number">2</span>&#125;;</span><br><span class="line"><span class="number">4</span> alert(a.x); <span class="comment">// --&gt; </span></span><br><span class="line"><span class="number">5</span> alert(b.x); <span class="comment">// --&gt; </span></span><br></pre></td></tr></table></figure>
-
+</li>
+<li><p> ② 双向数据绑定</p>
+</li>
+<li><p>优点：不操作 DOM 的前提下，自动把用户填写的内容同步到数据源中</p>
+</li>
+</ul>
+<h2 id="MVVM——Model、View-、-ViewModel"><a href="#MVVM——Model、View-、-ViewModel" class="headerlink" title="MVVM——Model、View 、 ViewModel"></a>MVVM——Model、View 、 ViewModel</h2><ul>
+<li><p>具体结构</p>
 <ul>
-<li><p>第三行声明变量b，并且把a的对象引用赋值给b。</p>
+<li><p>Model 表示当前页面渲染时所依赖的数据源。</p>
+</li>
+<li><p>View 表示当前页面所渲染的 DOM 结构。</p>
+</li>
+<li><p>ViewModel 表示 vue 的实例，它是 MVVM 的核心。</p>
+</li>
+</ul>
+</li>
+<li><p>工作原理</p>
 <ul>
-<li>此时，变量b和a指向的是同一个对象，即他们现在共享。</li>
-<li>a:{n:2},b:{n:2}</li>
-</ul>
+<li><p>当数据源发生变化时，会被 ViewModel 监听到，VM 会根据最新的数据源自动更新页面的结构</p>
 </li>
-<li><p>第四行:————连等是先确定<strong>所有</strong>变量的指针，再让指针指向那个赋值</p>
-<ul>
-<li>找到 a 和 a.x 的指针。如果已有指针，那么不改变它。如果没有指针，即那个变量还没被申明，那么就创建它，指向 null。<ul>
-<li>此时，a 是有指针的，指向 <code>&#123;n:1&#125;</code>；</li>
-<li>a.x 是没有指针的，所以创建它，指向 null。</li>
-</ul>
-</li>
-<li><strong><code>.</code>运算优先于<code>=</code>赋值运算</strong>，因此此处赋值可理解为<ol>
-<li>声明a对象中的x属性，用于赋值，此时b指向a，同时拥有未赋值的x属性</li>
-<li>对a对象赋值，此时变量名a改变指向到对象{n:2}</li>
-<li>对步骤1中x属性，也即a原指向对象的x属性，也即b指向对象的x属性赋值</li>
-</ol>
+<li><p>当表单元素的值发生变化时，也会被 VM 监听到，VM 会把变化过后最新的值自动同步到 Model 数据源中</p>
 </li>
 </ul>
 </li>
-<li><p>上图更明确：</p>
-<p><img  
+<li><p>MVVM具体结构的对应关系<img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/jannicaTan/image_picX/master/Interview/%E8%BF%9E%E7%AD%89%E8%B5%8B%E5%80%BC.webp"
-                      alt="连等赋值"
+                     data-src="https://api2.mubu.com/v3/document_image/2e31dec3-f22c-4e2d-add4-231fb6a4a0f9-17016005.jpg"
+                      alt="img"
                 ></p>
+</li>
+</ul>
+<h2 id="VUE指令"><a href="#VUE指令" class="headerlink" title="VUE指令"></a>VUE指令</h2><ul>
+<li><p>① 内容渲染指令</p>
+<ul>
+<li><p>v-text：</p>
+<ul>
+<li><p>放在标签内使用,只渲染纯文本</p>
+</li>
+<li><p>v-text 指令会覆盖元素内默认的值。</p>
+</li>
+</ul>
+</li>
+<li><p> 插值表达式——<code>&#123;&#123;msg&#125;&#125;</code></p>
+</li>
+<li><p>它不会覆盖元素中默认的文本内容，只渲染纯文本</p>
+</li>
+<li><p>⚠️：除了支持绑定简单的数据值之外，还支持 Javascript 表达式的运算:三元表达式/数字计算/数组修改</p>
+</li>
+<li><p>v-html</p>
+<ul>
+<li>将包含 HTML 标签的字符串渲染为页面的 HTML 元素</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>② 属性绑定指令——v-bind/：</p>
+<ul>
+<li>为元素的属性动态单向绑定属性值</li>
+</ul>
+</li>
+<li><p>③ 事件绑定指令——v-on/@</p>
+<ul>
+<li><p>为 DOM 元素绑定事件监听,eg:：@click、 @input、@keyup</p>
+</li>
+<li><p>绑定的事件处理函数，需要在 methods 节点中进行声明</p>
+</li>
+<li><p>常用事件修饰符——@event.事件修饰符<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://api2.mubu.com/v3/document_image/54eb416a-19e7-4a77-b2df-60f27ddc3529-17016005.jpg"
+                      alt="img"
+                ></p>
+</li>
+<li><p>按键修饰符——.enter .tab .delete (捕获“删除”和“退格”键) .esc .space .up .down .left .right</p>
+</li>
+<li><p>事件对象$event</p>
+<ul>
+<li><p>注意在事件中要使用 $event 符号</p>
+</li>
+<li><p>获取当前事件元素：e.target</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>④ 双向数据绑定指令——v-model</p>
+<ul>
+<li>常用修饰符<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://api2.mubu.com/v3/document_image/2265d85c-0848-4d0e-9c75-b824c1c1615b-17016005.jpg"
+                      alt="img"
+                ></li>
+</ul>
+</li>
+<li><p>⑤ 条件渲染指令——v-if/v-show</p>
+<ul>
+<li><p>实现原理</p>
+<ul>
+<li><p>v-if 指令会动态地创建或移除 DOM 元素，从而控制元素在页面上的显示与隐藏, 有更高的切换开销；</p>
+</li>
+<li><p>v-show 指令会动态为元素添加或移除 style=”display: none;” 样式，从而控制元素的显示与隐藏,更高的初始渲染开销；</p>
+</li>
+</ul>
+</li>
+<li><p>实际使用</p>
+<ul>
+<li><p>如果需要非常频繁地切换——使用 v-show</p>
+</li>
+<li><p>如果在运行时条件很少改变——使用 v-if</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>⑥ 列表渲染指令——v-for</p>
+<ul>
+<li><p><code>&lt;tr v-for=&quot;(item, index) in list&quot; :key=&quot;item.id&quot;&gt;&lt;/td&gt;</code></p>
+</li>
+<li><p>索引</p>
+<ul>
+<li><p>这里仅仅指的是它当前的位置，而不是绑定的元素/数据</p>
+</li>
+<li><p>v-for 指令中的 item 项和 index 索引都是形参，可以根据需要进行重命名。例如 (user, i) in userlist</p>
+</li>
+</ul>
+</li>
+<li><p>维护列表的状态——key</p>
+<ul>
+<li><p>key 的值只能是字符串或数字类型 key 的值必须具有唯一性（即：key 的值不能重复）</p>
+</li>
+<li><p>建议把数据项 id 属性的值作为 key 的值（因为 id 属性的值具有唯一性） </p>
+</li>
+<li><p>使用 index 的值当作 key 的值没有任何意义（因为 index 的值不具有唯一性）</p>
+</li>
+<li><p> 建议使用 v-for 指令时一定要指定 key 的值（既提升性能、又防止列表状态紊乱）</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="文本格式化——过滤器-filters"><a href="#文本格式化——过滤器-filters" class="headerlink" title="文本格式化——过滤器:filters()"></a>文本格式化——过滤器:filters()</h2><ul>
+<li><p>基本用法:</p>
+<ul>
+<li><p>本质上是函数，需定义在fliters下</p>
+</li>
+<li><p>在过滤器函数中，一定要有 return 值</p>
+</li>
+<li><p>在html语句中的插值表达式内利用管道符插入相关处理函数： <code>&lt;p&gt;message 的值是：&#123;&#123; message | capi &#125;&#125;&lt;/p&gt;</code></p>
+</li>
+<li><p> ⚠️注意：过滤器函数形参可以有其他的参数，但是其默认的第一参数—— val，永远都是“管道符”前面的那个值</p>
+</li>
+</ul>
+</li>
+<li><p>过滤器分类</p>
+<ul>
+<li><p>全局过滤器</p>
+<ul>
+<li><p>具体格式：<code>Vue.filter(&#39;过滤器名称&#39;, function (参数)&#123; &#125; ) </code></p>
+</li>
+<li><p>优点：具有复用性</p>
+</li>
+</ul>
+</li>
+<li><p>私有过滤器：直接在vm中调用</p>
+</li>
+</ul>
+</li>
+<li><p>调用原则——就近：如果全局过滤器和私有过滤器名字一致，此时按照“就近原则”，调用的是”私有过滤器“</p>
+</li>
+<li><p>未完成：完善案例：时间格式化</p>
+</li>
+</ul>
+<h2 id="监视数据变化——侦听器-watch"><a href="#监视数据变化——侦听器-watch" class="headerlink" title="监视数据变化——侦听器:watch:{}"></a>监视数据变化——侦听器:watch:{}</h2><ul>
+<li><p>语法格式:侦听器本质上是一个函数，把数据名作为方法名。新值在前，旧值在后</p>
+</li>
+<li><p>侦听器格式：</p>
+<ul>
+<li><p>方法格式：</p>
+<ul>
+<li><p>具体格式参考：可以看到将数据dataname作为方法名(newVal)<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://api2.mubu.com/v3/document_image/aa8d9d7a-233f-4db6-bf9d-b93143371478-17016005.jpg"
+                      alt="img"
+                ></p>
+</li>
+<li><p>缺点：</p>
+<ul>
+<li><p>1：无法在刚进入页面的时候，自动触发</p>
+</li>
+<li><p>2：如果侦听的数据data中是一个对象，如果对象中的属性发生了变化，不会触发侦听器！！！</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>对象格式：</p>
+<ul>
+<li><p>具体格式参考：此时需要一个<code>handler(newVal,oldVal)</code>的处理函数进行传值<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://api2.mubu.com/v3/document_image/7565ec02-1474-47ce-be69-c7c70cdfcdf4-17016005.jpg"
+                      alt="img"
+                ></p>
+</li>
+<li><p>优点：</p>
+<ul>
+<li><p>1：侦听器自动触发—— immediate 选项</p>
+<ul>
+<li>immediate为boolean类型，默认为false，如果为true则设置自动触发一次</li>
+</ul>
+</li>
+<li><p>2：侦听器深度监听对象中每个属性的变化—— deep 选项</p>
+<ul>
+<li><p>deep选项为boolean类型，默认为false，如果为true，只要对象中任何一个属性变化了，都会触发“对象的侦听器”</p>
+</li>
+<li><p>⚠️注意：如果要单独侦听对象子属性的变化，则必须包裹一层单引号——‘info.username’(newVal) {}</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="计算属性——computed"><a href="#计算属性——computed" class="headerlink" title="计算属性——computed()"></a>计算属性——computed()</h2><ul>
+<li><p>定义的时候，要被定义为“方法”,但本质是一个属性</p>
+</li>
+<li><p>具体格式：写在<code>computed:&#123;&#125;</code>中，属性要定义为方法格式<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://api2.mubu.com/v3/document_image/418bd9a4-feb6-4ec8-9582-2f438b6998b8-17016005.jpg"
+                      alt="img"
+                ></p>
+</li>
+<li><p>优点：</p>
+<ul>
+<li><p>实现了代码的复用</p>
+</li>
+<li><p>只要计算属性中依赖的数据源变化了，则计算属性会自动重新求值！</p>
+</li>
+</ul>
 </li>
 </ul>
 
@@ -291,11 +488,11 @@
             <div class="post-copyright-info">
                 <div class="article-copyright-info-container">
     <ul>
-        <li>Post title：连等赋值问题</li>
+        <li>Post title：vue基础——特性/指令/过滤器/侦听器/计算属性</li>
         <li>Post author：JannicaTan</li>
-        <li>Create time：2022-02-25 16:20:41</li>
+        <li>Create time：2022-02-27 21:56:37</li>
         <li>
-            Post link：https://jannicatan.github.io/Interview/interview/20220225-2022-02.html
+            Post link：https://jannicatan.github.io/VUE/VUE-study/vue-base-2022-02.html
         </li>
         <li>
             Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
@@ -310,7 +507,7 @@
             <ul class="post-tags-box">
                 
                     <li class="tag-item">
-                        <a href="/tags/javascript/">#javascript</a>&nbsp;
+                        <a href="/tags/VUE/">#VUE</a>&nbsp;
                     </li>
                 
             </ul>
@@ -319,29 +516,14 @@
         
             <div class="article-nav">
                 
-                    <div class="article-prev">
-                        <a class="prev"
-                           rel="prev"
-                           href="/VUE/VUE-study/vue-base-2022-02.html"
-                        >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">vue基础——特性/指令/过滤器/侦听器/计算属性</span>
-                                <span class="post-nav-item">Prev posts</span>
-                            </span>
-                        </a>
-                    </div>
-                
                 
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/VUE-study/webpack%E5%AD%A6%E4%B9%A0%E5%8F%8A%E9%85%8D%E7%BD%AE-2022-02.html"
+                           href="/Interview/interview/20220225-2022-02.html"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">Webpack基础配置(待继续更新)</span>
+                                <span class="post-nav-title-item">连等赋值问题</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -466,7 +648,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E8%B5%8B%E5%80%BC%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E6%A6%82%E5%BF%B5%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">1.赋值表达式的概念：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9E%E7%AD%89%E7%9A%84%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">连等的核心思想：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E4%BA%8E%E9%A2%981"><span class="nav-number">3.</span> <span class="nav-text">对于题1:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E4%BA%8E%E9%A2%982"><span class="nav-number">4.</span> <span class="nav-text">对于题2:</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#VUE%E7%89%B9%E6%80%A7"><span class="nav-number">1.</span> <span class="nav-text">VUE特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MVVM%E2%80%94%E2%80%94Model%E3%80%81View-%E3%80%81-ViewModel"><span class="nav-number">2.</span> <span class="nav-text">MVVM——Model、View 、 ViewModel</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VUE%E6%8C%87%E4%BB%A4"><span class="nav-number">3.</span> <span class="nav-text">VUE指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E6%9C%AC%E6%A0%BC%E5%BC%8F%E5%8C%96%E2%80%94%E2%80%94%E8%BF%87%E6%BB%A4%E5%99%A8-filters"><span class="nav-number">4.</span> <span class="nav-text">文本格式化——过滤器:filters()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%91%E8%A7%86%E6%95%B0%E6%8D%AE%E5%8F%98%E5%8C%96%E2%80%94%E2%80%94%E4%BE%A6%E5%90%AC%E5%99%A8-watch"><span class="nav-number">5.</span> <span class="nav-text">监视数据变化——侦听器:watch:{}</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7%E2%80%94%E2%80%94computed"><span class="nav-number">6.</span> <span class="nav-text">计算属性——computed()</span></a></li></ol>
     </div>
 </div>
         </aside>
