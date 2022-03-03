@@ -44,8 +44,7 @@ categories: VUE
 
     - v-text 指令会覆盖元素内默认的值。
 
-  -  插值表达式——
-  
+  -  插值表达式——`{{msg}}`
   
     - 它不会覆盖元素中默认的文本内容，只渲染纯文本
 
@@ -92,7 +91,7 @@ categories: VUE
 
 - ⑥ 列表渲染指令——v-for
 
-  - <tr v-for="(item, index) in list" :key="item.id"></td>
+  - `<tr v-for="(item, index) in list" :key="item.id"></td>`
 
   - 索引
 
@@ -118,7 +117,7 @@ categories: VUE
 
   - 在过滤器函数中，一定要有 return 值
 
-  - 在html语句中的插值表达式内利用管道符插入相关处理函数：<p>message 的值是：{{ message | capi }}</p>
+  - 在html语句中的插值表达式内利用管道符插入相关处理函数： `<p>message 的值是：{{ message | capi }}</p>`
 
   -  ⚠️注意：过滤器函数形参可以有其他的参数，但是其默认的第一参数—— val，永远都是“管道符”前面的那个值
 
@@ -126,7 +125,7 @@ categories: VUE
 
   - 全局过滤器
 
-    - 具体格式：Vue.filter('过滤器名称', function (参数){ } ) 
+    - 具体格式：`Vue.filter('过滤器名称', function (参数){ } ) `
 
     - 优点：具有复用性
 
@@ -154,7 +153,7 @@ categories: VUE
 
   - 对象格式：
 
-    - 具体格式参考：此时需要一个handler(newVal,oldVal)的处理函数进行传值![img](https://api2.mubu.com/v3/document_image/7565ec02-1474-47ce-be69-c7c70cdfcdf4-17016005.jpg)
+    - 具体格式参考：此时需要一个`handler(newVal,oldVal)`的处理函数进行传值![img](https://api2.mubu.com/v3/document_image/7565ec02-1474-47ce-be69-c7c70cdfcdf4-17016005.jpg)
 
     - 优点：
 
@@ -171,7 +170,7 @@ categories: VUE
 
 - 定义的时候，要被定义为“方法”,但本质是一个属性
 
-- 具体格式：写在computed:{}中，属性要定义为方法格式![img](https://api2.mubu.com/v3/document_image/418bd9a4-feb6-4ec8-9582-2f438b6998b8-17016005.jpg)
+- 具体格式：写在`computed:{}`中，属性要定义为方法格式![img](https://api2.mubu.com/v3/document_image/418bd9a4-feb6-4ec8-9582-2f438b6998b8-17016005.jpg)
 
 - 优点：
 
