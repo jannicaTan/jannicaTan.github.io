@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="JannicaTan">
+    
+    <title>
+        
+            计算机网络 |
+        
+        Jing&#39;s Blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/Watermelon.svg">
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"jannicatan.github.io","root":"/","language":"en","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#FFCC99","avatar":"/images/author.jpeg","favicon":"/images/Watermelon.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg_tangle.png","description":"Keep writing , Keep Studying"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":true},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                Jing&#39;s Blog
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">计算机网络</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/author.jpeg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">JannicaTan</span>
+                        
+                            <span class="author-label">初级前端</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-03-26 22:59:11</span>
+        <span class="mobile">2022-03-26 22:59</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/interview/">interview</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/interview/">interview</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>2.8k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>10 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <ul>
+<li><h2 id="知识点："><a href="#知识点：" class="headerlink" title="知识点："></a>知识点：</h2><ul>
+<li><h3 id="进程和线程"><a href="#进程和线程" class="headerlink" title="进程和线程"></a>进程和线程</h3><ul>
+<li><p>进程：内存中正在运行的应用程序</p>
+</li>
+<li><p>线程：进程的最小执行单位</p>
+</li>
+<li><p>浏览器采取了多进程模型（至少4个）</p>
+<ul>
+<li><p>浏览器进程主要负责界面显示、用户交互、子进程管理、同时提供存储等功能。</p>
+</li>
+<li><p>渲染进程 核心任务是将HTML、CSS和JavaScript转换为用户可以与之交互的网页，排版引擎Blink和JavaScript引擎V8都运行在该进程中，默认情况下，Chrome为每一个Tab标签页创建一个渲染进程。出于安全考虑，渲染进程都是运行在沙箱模式下的。</p>
+</li>
+<li><p>GPU进程。GPU图形处理器（英语：graphics processing unit，缩写：GPU）,负责3D css效果，网页，Chrome ui的绘制。</p>
+</li>
+<li><p>网络进程主要负责页面的网络资源加载，之前是作为一个模块运行在浏览器进程里面的，直至最近才独立处理，成为单独一个进程。</p>
+</li>
+<li><p>插件进程。主要负责插件的运行，因为插件易崩溃，所以通过插件进程来隔离，以保证插件进程崩溃不会对浏览器和页面造成影响。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3 id="计算机网络的ISO七层模型"><a href="#计算机网络的ISO七层模型" class="headerlink" title="计算机网络的ISO七层模型"></a>计算机网络的ISO七层模型</h3><ul>
+<li><p>1、物理层：</p>
+<ul>
+<li>使用一定的物理介质(光纤，网线wifi）</li>
+</ul>
+</li>
+<li><p>2、数据链路层：MAC地址 封裝 单位为byte</p>
+<ul>
+<li>通过网关进行通信 </li>
+</ul>
+</li>
+<li><p>3、网络层：</p>
+<ul>
+<li>IP协议：将数据从主机A发送给主机B，不能保证肯定发送给目标</li>
+</ul>
+</li>
+<li><p>4、传输层：具有端口，确保数据传输</p>
+<ul>
+<li><p>UDP(用户数据包协议）——只管发不管收——DNS</p>
+</li>
+<li><p>TCP(传输控制协议)：</p>
+<ul>
+<li><p>重传机制</p>
+</li>
+<li><p>排序机制：<br>将主机A发给B的多个数据包按照编号进行排序进行重组，保证完整性</p>
+</li>
+<li><p>相关面试题：TCP和UDP区别:面向连接/可靠性/基于字节流/TCP三次握手/TCP四次挥手</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>5、会话层:</p>
+<ul>
+<li>断点续传</li>
+</ul>
+</li>
+<li><p>6、表示层——翻译——解决不同系统数据之间传输的问题</p>
+</li>
+<li><p>7、应用层：#问题</p>
+<ul>
+<li>HTTP协议：</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3 id="HTTP请求流程"><a href="#HTTP请求流程" class="headerlink" title="HTTP请求流程"></a>HTTP请求流程</h3><ul>
+<li><p>浏览器发送HTTP请求 </p>
+<ul>
+<li><p>1、构造请求行：GET /api/article HTTP/1.1</p>
+</li>
+<li><p>2、查找缓存：有就去缓存存，没有呢就发选网络请求</p>
+</li>
+<li><p>3、准备IP地址和端口号</p>
+</li>
+<li><p>4、 等待TCP队列:因为一个域名最多只能生立6个TCP连接</p>
+</li>
+<li><p>5、建立TCP连接</p>
+</li>
+<li><p>6、发送HTTP请求</p>
+</li>
+<li><p>版本2:</p>
+<ul>
+<li><p>1、先查找缓存，检测缓存是否过期，直接返回缓存中内容</p>
+</li>
+<li><p>2、看域名是否被解析，DNS协议，DNS协议是基于UPD协议  ip+端口号 </p>
+</li>
+<li><p>3、ip地址寻址，排队等候，最多发送6个http请求</p>
+</li>
+<li><p>4、tcp创建链接，用户传输(三次握手)</p>
+</li>
+<li><p>5、利用tcp传输数据(拆分数据包，有序)  可靠，有序，服务器会按照顺序来接受</p>
+</li>
+<li><p>6、http请求(请求行，请求头，请求体)</p>
+</li>
+<li><p>7、默认不会断开keep-alive，为下次传输数据是，可以复用上次的创建的连接</p>
+</li>
+<li><p>8、服务器接受数据后(响应行 响应头 响应头)</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3 id="输入url地址到显示的过程"><a href="#输入url地址到显示的过程" class="headerlink" title="输入url地址到显示的过程"></a>输入url地址到显示的过程</h3><ul>
+<li><p>进程角度：</p>
+</li>
+<li><p>其他角度</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h2 id="常见面试题"><a href="#常见面试题" class="headerlink" title="常见面试题"></a>常见面试题</h2><ul>
+<li><h3 id="一次完整的http服务过程"><a href="#一次完整的http服务过程" class="headerlink" title="一次完整的http服务过程"></a>一次完整的http服务过程</h3><ul>
+<li><p>一次完整的http服务的几个阶段</p>
+</li>
+<li><p>html的渲染过程</p>
+</li>
+<li><p>常见的http请求状态码</p>
+</li>
+</ul>
+</li>
+<li><h3 id="传输层——TCP-UDP相关"><a href="#传输层——TCP-UDP相关" class="headerlink" title="传输层——TCP/UDP相关"></a>传输层——TCP/UDP相关</h3><ul>
+<li><h4 id="TCP和UDP区别-面向连接-可靠性-基于字节流"><a href="#TCP和UDP区别-面向连接-可靠性-基于字节流" class="headerlink" title="TCP和UDP区别:面向连接/可靠性/基于字节流"></a>TCP和UDP区别:面向连接/可靠性/基于字节流</h4><ul>
+<li><p>TCP是基于连接的，可靠性高(有状态/可控制/TCP流量控制/TCP拥塞控制)，安全，但是相同数据下开销大；只支持点到点连接，面向字节流</p>
+<ul>
+<li><p>有状态；TCP会精准记录哪些数据发送了，被对方接受了，哪些没有，而保证数据按序到达，不允许差错 </p>
+</li>
+<li><p>可控制；意识到丢包或者网络环境差，TCP根据具体情况调整自己的行为，控制自己发送速度或重发</p>
+</li>
+</ul>
+</li>
+<li><p>UDP是基于无连接的，可靠性较低，实时性高，会存在丢包问题，支持多种连接方式</p>
+</li>
+<li><p>应用场景的区别：</p>
+<ul>
+<li><p>如果对实时性要求高和高速传输/可靠性要求低追求效率的场景下需要使用UDP；</p>
+</li>
+<li><p>如果需要传输大量数据且对数据可靠性要求高的场景使用TCP；</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h4 id="TCP三次握手"><a href="#TCP三次握手" class="headerlink" title="TCP三次握手"></a>TCP三次握手</h4><ul>
+<li><p>握手过程：确认双方的两样能力: 发送的能力和接收的能力</p>
+<ul>
+<li><p>1.最开始双方都属于CLOSED状态。然后服务器开始监听某个端口，进入LISTEN状态。</p>
+</li>
+<li><p>2.客户端注重发起连接，发送SYN，自己变成了SYN-SENT状态</p>
+</li>
+<li><p>3.服务端收到，返回SYN和ACK（对应客户端发来的SYN），自己变成了SYN-REVD</p>
+</li>
+<li><p>4.客户端再发送ACK给服务端，自己变成ESTABLISHED（established）状态；服务端收到ACK之后，也变成这个状态</p>
+</li>
+<li><p>#注意：SYN 是需要消耗一个序列号的，下次发送对应的 ACK 序列号要加1<br>凡是需要对端确认的，一定消耗TCP报文的序列号。</p>
+</li>
+</ul>
+</li>
+<li><p>为什么不是两次？</p>
+<ul>
+<li>两次握手只能确定从 客户端 到 服务端 的网络是可达的，但却无法保证从 服务端 到 客户端 的网络是可达的。第三次握手就是为了确定从 服务端 到 客户端 的网络是否可达，两次握手，服务端只要接收到然后发送相应的数据包，就 默认连接 了 ，但是事实上现在客户端可能已经断开连接了，这样也就带来了连接资源的浪费 </li>
+</ul>
+</li>
+<li><p>为什么不是四次？</p>
+<ul>
+<li>当然可以，100 次都可以。但为了解决问题，三次就足够了，再多用处就不大了。</li>
+</ul>
+</li>
+<li><p>三次握手过程中可以携带数据么？</p>
+<ul>
+<li>可以，但是只有第三次，此时的established状态相对安全并且够确认服务器的接收发送能力。而不能在第一次握手携带数据是为了防止黑客在syn中放入大量数据造成服务器资源的消耗。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h4 id="TCP四次挥手"><a href="#TCP四次挥手" class="headerlink" title="TCP四次挥手"></a>TCP四次挥手</h4><ul>
+<li><p>过程</p>
+<ul>
+<li><p>首先客户端主动关闭，向服务器发FIN报文</p>
+</li>
+<li><p>服务端接收后通知应用进程并向客户端发送ACK确认</p>
+</li>
+<li><p>服务端处理完后被动关闭再次向客户端发送FIN以及ACK，进入LAST-ACK状态，</p>
+</li>
+<li><p>客户端收到服务端发来的FIN后，发送 ACK 给服务端。在等待2MSL后进入CLOSED状态</p>
+</li>
+</ul>
+</li>
+<li><p>#问题 为什么要等待2MSL（最长报文段寿命）</p>
+<p>如果客户端没有收到服务端的重发请求，表示 ACK 成功到达，挥手结束，否则客户端重发 ACK。</p>
+<ul>
+<li><p>1 个 MSL 确保四次挥手中第四步的ACK可以准确到达</p>
+</li>
+<li><p>1 个 MSL 确保对端没有收到 ACK 重传的 FIN 报文可以到达</p>
+</li>
+<li><p>如果不等待：<br>当服务端还有很多数据包要给客户端发，此时客户端的端口此时刚好被新的应用占用，那么就接收到了无用数据包，造成数据包混乱。所以，最保险的做法是等服务器发来的数据包都死翘翘再启动新的应用。</p>
+</li>
+</ul>
+</li>
+<li><p>为什么不是三次？</p>
+<ul>
+<li><p>如果三次，服务端将ACK和FIN的发送合并为一次挥手，这个时候为了传递没有完成的数据，长时间的延迟可能会导致客户端误以为FIN没有到达客户端，从而让客户端不断的重发FIN。</p>
+</li>
+<li><p>因为服务端在接收到FIN, 往往不会立即返回FIN, 必须等到服务端所有的报文都发送完毕了，才能发FIN。因此先发一个ACK表示已经收到客户端的FIN，延迟一段时间才发FIN。这就造成了四次挥手。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h4 id="SYN-Flood-攻击原理"><a href="#SYN-Flood-攻击原理" class="headerlink" title="SYN Flood 攻击原理"></a>SYN Flood 攻击原理</h4><ul>
+<li><p>原理:典型的 DoS/DDoS 攻击。用客户端在短时间内伪造大量不存在的 IP地址，并向服务端疯狂发送SYN。</p>
+<ul>
+<li><p>处理大量的SYN包并返回对应ACK, 势必有大量连接处于SYN_RCVD状态，从而占满整个半连接队列，无法处理正常的请求。</p>
+</li>
+<li><p>由于是不存在的 IP，服务端长时间收不到客户端的ACK，会导致服务端不断重发数据，直到耗尽服务端的资源。</p>
+</li>
+</ul>
+</li>
+<li><p>应对方法: </p>
+<ul>
+<li><p>增加 SYN 连接，也就是增加半连接队列的容量。</p>
+</li>
+<li><p>减少 SYN + ACK 重试次数，避免大量的超时重发。</p>
+</li>
+<li><p>利用 SYN Cookie技术，在服务端接收到SYN后不立即分配连接资源，而是根据这个SYN计算出一个Cookie，连同第二次握手回复给客户端，在客户端回复ACK的时候带上这个Cookie值，服务端验证Cookie 合法之后才分配连接资源。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h4 id="TCP-短连接和长连接的区别"><a href="#TCP-短连接和长连接的区别" class="headerlink" title="TCP 短连接和长连接的区别"></a>TCP 短连接和长连接的区别</h4><ul>
+<li><p>短连接：</p>
+<ul>
+<li><p>Client 向 Server 发送消息，Server 回应 Client，然后一次读写就完成了，这时候双方任何一个都可以发起 close 操作，不过一般都是 Client 先发起 close 操作。短连接一般只会在 Client/Server 间传递一次读写操作。</p>
+</li>
+<li><p>优点：管理起来比较简单，建立存在的连接都是有用的连接，不需要额外的控制手段。</p>
+</li>
+</ul>
+</li>
+<li><p>长连接：</p>
+<ul>
+<li><p>Client 与 Server 完成一次读写之后，它们之间的连接并不会主动关闭，后续的读写操作会继续使用这个连接。</p>
+</li>
+<li><p>应对策略：</p>
+<ul>
+<li><p>关闭一些长时间没有读写事件发生的连接，这样可以避免一些恶意连接导致 Server 端服务受损；</p>
+</li>
+<li><p>以客户端为颗粒度，限制每个客户端的最大长连接数，从而避免某个客户端连累后端的服务。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h4 id="TCP可靠性特质"><a href="#TCP可靠性特质" class="headerlink" title="TCP可靠性特质"></a>TCP可靠性特质</h4><ul>
+<li><p>TCP流量控制</p>
+</li>
+<li><p>TCP拥塞控制</p>
+</li>
+</ul>
+</li>
+<li><h4 id="粘包拆包问题（消息边界问题）"><a href="#粘包拆包问题（消息边界问题）" class="headerlink" title="粘包拆包问题（消息边界问题）"></a>粘包拆包问题（消息边界问题）</h4><ul>
+<li><p>场景</p>
+<p>假设客户端分别发送了两个数据包D1和D2给服务端，由于服务端一次读取到的字节数是不确定的，故可能存在以下4种情况。</p>
+<ul>
+<li><p>成功结果：服务端分两次读取到了两个独立的数据包，分别是D1和D2，没有粘包和拆包；</p>
+</li>
+<li><p>失败1：服务端一次接收到了两个数据包，D1和D2粘合在一起，被称为TCP粘包；</p>
+</li>
+<li><p>失败2：服务端分两次读取到了两个数据包，第一次读取到了完整的D1包和D2包的部分内容，第二次读取到了D2包的剩余内容，这被称为TCP拆包；</p>
+</li>
+<li><p>失败3：服务端分两次读取到了两个数据包，第一次读取到了D1包的部分内容D1_1，第二次读取到了D1包的剩余内容D1_2和D2包的整包。</p>
+</li>
+</ul>
+</li>
+<li><p>如果此时服务端TCP接收滑窗非常小，而数据包D1和D2比较大，很有可能会发生第五种可能，即服务端分多次才能将D1和D2包接收完全，期间发生多次拆包。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3 id="应用层-HTTP、HTPS、DNS"><a href="#应用层-HTTP、HTPS、DNS" class="headerlink" title="应用层-HTTP、HTPS、DNS"></a>应用层-HTTP、HTPS、DNS</h3><ul>
+<li><p>HTTP的特点？它有什么缺点？</p>
+</li>
+<li><p>HTTP请求报文</p>
+</li>
+<li><p>HTTP响应报文</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>Post title：计算机网络</li>
+        <li>Post author：JannicaTan</li>
+        <li>Create time：2022-03-26 22:59:11</li>
+        <li>
+            Post link：https://jannicatan.github.io/interview/面试/网络相关-2022-03.html
+        </li>
+        <li>
+            Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/interview/">#interview</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/Algorithm/Algorithm/page-2022-03.html"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Algorithm</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2021</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">JannicaTan</a>
+        </div>
+        
+            <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">知识点：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B"><span class="nav-number">1.1.</span> <span class="nav-text">进程和线程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84ISO%E4%B8%83%E5%B1%82%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.2.</span> <span class="nav-text">计算机网络的ISO七层模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP%E8%AF%B7%E6%B1%82%E6%B5%81%E7%A8%8B"><span class="nav-number">1.3.</span> <span class="nav-text">HTTP请求流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5url%E5%9C%B0%E5%9D%80%E5%88%B0%E6%98%BE%E7%A4%BA%E7%9A%84%E8%BF%87%E7%A8%8B"><span class="nav-number">1.4.</span> <span class="nav-text">输入url地址到显示的过程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">常见面试题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E6%AC%A1%E5%AE%8C%E6%95%B4%E7%9A%84http%E6%9C%8D%E5%8A%A1%E8%BF%87%E7%A8%8B"><span class="nav-number">2.1.</span> <span class="nav-text">一次完整的http服务过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%A0%E8%BE%93%E5%B1%82%E2%80%94%E2%80%94TCP-UDP%E7%9B%B8%E5%85%B3"><span class="nav-number">2.2.</span> <span class="nav-text">传输层——TCP&#x2F;UDP相关</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#TCP%E5%92%8CUDP%E5%8C%BA%E5%88%AB-%E9%9D%A2%E5%90%91%E8%BF%9E%E6%8E%A5-%E5%8F%AF%E9%9D%A0%E6%80%A7-%E5%9F%BA%E4%BA%8E%E5%AD%97%E8%8A%82%E6%B5%81"><span class="nav-number">2.2.1.</span> <span class="nav-text">TCP和UDP区别:面向连接&#x2F;可靠性&#x2F;基于字节流</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B"><span class="nav-number">2.2.2.</span> <span class="nav-text">TCP三次握手</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TCP%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B"><span class="nav-number">2.2.3.</span> <span class="nav-text">TCP四次挥手</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SYN-Flood-%E6%94%BB%E5%87%BB%E5%8E%9F%E7%90%86"><span class="nav-number">2.2.4.</span> <span class="nav-text">SYN Flood 攻击原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TCP-%E7%9F%AD%E8%BF%9E%E6%8E%A5%E5%92%8C%E9%95%BF%E8%BF%9E%E6%8E%A5%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">2.2.5.</span> <span class="nav-text">TCP 短连接和长连接的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TCP%E5%8F%AF%E9%9D%A0%E6%80%A7%E7%89%B9%E8%B4%A8"><span class="nav-number">2.2.6.</span> <span class="nav-text">TCP可靠性特质</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%B2%98%E5%8C%85%E6%8B%86%E5%8C%85%E9%97%AE%E9%A2%98%EF%BC%88%E6%B6%88%E6%81%AF%E8%BE%B9%E7%95%8C%E9%97%AE%E9%A2%98%EF%BC%89"><span class="nav-number">2.2.7.</span> <span class="nav-text">粘包拆包问题（消息边界问题）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%B1%82-HTTP%E3%80%81HTPS%E3%80%81DNS"><span class="nav-number">2.3.</span> <span class="nav-text">应用层-HTTP、HTPS、DNS</span></a></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+
+    
+<script src="/js/code-copy.js"></script>
+
+
+
+
+    
+<script src="/js/lazyload.js"></script>
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/left-side-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
+    
+</div>
+
+
+
+</body>
+</html>
