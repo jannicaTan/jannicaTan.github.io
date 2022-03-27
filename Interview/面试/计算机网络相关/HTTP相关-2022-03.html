@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="JannicaTan">
+    
+    <title>
+        
+            HTTP相关 |
+        
+        Jing&#39;s Blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/Watermelon.svg">
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"jannicatan.github.io","root":"/","language":"en","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#FFCC99","avatar":"/images/author.jpeg","favicon":"/images/Watermelon.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg_tangle.png","description":"Keep writing , Keep Studying"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":true},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                Jing&#39;s Blog
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">HTTP相关</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/author.jpeg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">JannicaTan</span>
+                        
+                            <span class="author-label">高级前端</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-03-27 22:50:51</span>
+        <span class="mobile">2022-03-27 22:50</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/Interview/">Interview</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>2k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>7 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h1 id="应用层-HTTP、HTPS、DNS"><a href="#应用层-HTTP、HTPS、DNS" class="headerlink" title="应用层-HTTP、HTPS、DNS"></a>应用层-HTTP、HTPS、DNS</h1><h2 id="HTTP的特点？它有什么缺点？"><a href="#HTTP的特点？它有什么缺点？" class="headerlink" title="HTTP的特点？它有什么缺点？"></a>HTTP的特点？它有什么缺点？</h2><h3 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h3><ul>
+<li><p>端对端， 灵活可拓展，</p>
+</li>
+<li><p>基于 TCP/IP-&gt;可靠</p>
+</li>
+<li><p>每一次请求都是独立无关的-&gt; 无状态</p>
+</li>
+</ul>
+<h3 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h3><ul>
+<li><p>明文传输(不加密)，无法验证报文的完整性，不验证通信方的身份，内容可能被窃听、被篡改。</p>
+</li>
+<li><p>无状态，它是缺点也是优点吧，分不同的场景。</p>
+</li>
+<li><p>队头阻塞——HTTP2多路复用解决</p>
+<ul>
+<li><p>HTTP 1.x 中，如果想并发多个请求，必须使用多个 TCP 链接，且浏览器为了控制资源，还会对单个域名有 6-8个的TCP链接请求限制。</p>
+</li>
+<li><p>HTTP2中：</p>
+<ul>
+<li><p>同域名下所有通信都在单个连接上完成。单个连接可以承载任意数量的双向数据流。</p>
+</li>
+<li><p>数据流以消息的形式发送，而消息又由一个或多个帧组成，多个帧之间可以乱序发送，因为根据帧首部的流标识可以重新组装</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="HTTP请求报文（客户端）"><a href="#HTTP请求报文（客户端）" class="headerlink" title="HTTP请求报文（客户端）"></a>HTTP请求报文（客户端）</h2><h3 id="常用请求方法："><a href="#常用请求方法：" class="headerlink" title="常用请求方法："></a>常用请求方法：</h3><ul>
+<li><p>GET: 通常用于请求服务器发送某些资源</p>
+</li>
+<li><p>POST: 发送数据给服务器</p>
+</li>
+<li><p>PUT: 用于新增资源或者使用请求中的有效负载替换目标资源的表现形式</p>
+</li>
+<li><p>DELETE: 用于删除指定的资源</p>
+</li>
+<li><p>CONNECT: HTTP/1.1协议中预留给能够将连接改为管道方式的代理服务器</p>
+</li>
+<li><p>OPTIONS: 用于获取目的资源所支持的通信选项</p>
+</li>
+</ul>
+<h3 id="GET-检索-amp-amp-获取）-POST（创建-更新）区别"><a href="#GET-检索-amp-amp-获取）-POST（创建-更新）区别" class="headerlink" title="GET(检索&amp;&amp;获取）/POST（创建||更新）区别"></a>GET(检索&amp;&amp;获取）/POST（创建||更新）区别</h3><ul>
+<li><p>参数角度：get在URL中，post在请求体中,并且post支持更多数据类型</p>
+</li>
+<li><p>缓存安全性不同：浏览器一般会对 Get 请求缓存，很容易通过历史记录、缓存查到数据信息。但很少对 Post 请求缓存。get可以回退/post不可以回退</p>
+</li>
+<li><p>数据类型不同：get使用url发送数据，使用的百分号编码,不是简单的ASCII码（比如{，不能够在url直接使用）</p>
+</li>
+<li><p>应用场景：get安全幂等，不会引起服务器状态变化。</p>
+<ul>
+<li>自己理解的话：在没有其他操作的情况下，get多次请求结果和一次请求结果相同。post非安全非幂等。</li>
+</ul>
+</li>
+</ul>
+<h3 id="PUT和POST都可以给服务器新增资源，有什么区别？"><a href="#PUT和POST都可以给服务器新增资源，有什么区别？" class="headerlink" title="PUT和POST都可以给服务器新增资源，有什么区别？"></a>PUT和POST都可以给服务器新增资源，有什么区别？</h3><ul>
+<li><p>PUT：幂等，URI指向单一资源。</p>
+</li>
+<li><p>POST：非幂等，URI指向资源集合。</p>
+</li>
+<li><p>eg：比如博客系统，创建新文章，用POST <a class="link"   target="_blank" rel="noopener" href="https://www.blog.com/articles,%E5%A4%9A%E6%AC%A1%E8%B0%83%E7%94%A8%EF%BC%8C%E5%B0%B1%E5%88%9B%E5%BB%BA%E5%A4%9A%E4%B8%AA%E6%96%87%E7%AB%A0%E3%80%82%E5%A6%82%E6%9E%9C%E6%9B%B4%E6%96%B0%E6%8C%87%E5%AE%9A%E6%96%87%E7%AB%A0%E7%9A%84%E6%A0%87%E9%A2%98%EF%BC%8C%E7%94%A8PUT" >https://www.blog.com/articles,多次调用，就创建多个文章。如果更新指定文章的标题，用PUT<i class="fas fa-external-link-alt"></i></a> <a class="link"   target="_blank" rel="noopener" href="https://www.blog.com/articles/000001,%E5%A4%9A%E6%AC%A1%E8%B0%83%E7%94%A8%EF%BC%8C%E5%92%8C%E7%AC%AC%E4%B8%80%E6%AC%A1%E8%B0%83%E7%94%A8%E6%95%88%E6%9E%9C%E7%9B%B8%E5%90%8C%E3%80%82" >https://www.blog.com/articles/000001,多次调用，和第一次调用效果相同。<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+</ul>
+<h3 id="http-请求方法-options-方法有什么用？"><a href="#http-请求方法-options-方法有什么用？" class="headerlink" title="http 请求方法 options 方法有什么用？"></a>http 请求方法 options 方法有什么用？</h3><ul>
+<li><p>旨在发送一种探测请求，以确定针对某个目标地址的请求必须具有怎么样的约束，然后根据约束发送真正的请求。</p>
+</li>
+<li><p>应用场景：针对跨域资源的预检，处理跨域请求。就是采用 HTTP 的 OPTIONS 方法先发送的。</p>
+</li>
+</ul>
+<h2 id="常见状态码："><a href="#常见状态码：" class="headerlink" title="常见状态码："></a>常见状态码：</h2><h2 id="HTTP响应报文（服务端）"><a href="#HTTP响应报文（服务端）" class="headerlink" title="HTTP响应报文（服务端）"></a>HTTP响应报文（服务端）</h2><h2 id="HTTP的keep-alive是干什么的？"><a href="#HTTP的keep-alive是干什么的？" class="headerlink" title="HTTP的keep-alive是干什么的？"></a>HTTP的keep-alive是干什么的？</h2><ul>
+<li>早期HTTP/1.0每次请求都要重新建立一次连接，为了减少资源消耗、缩短响应时间，就要重用连接，想要保持长连接，需要在请求头上加上Connection:keep-alive。</li>
+</ul>
+<h2 id="HTTP1-1-和-HTTP-1-0之向区别"><a href="#HTTP1-1-和-HTTP-1-0之向区别" class="headerlink" title="HTTP1.1 和 HTTP 1.0之向区别"></a>HTTP1.1 和 HTTP 1.0之向区别</h2><ul>
+<li><p>HTTP/1.0有GET、POST、HEAD三个请求方法</p>
+</li>
+<li><p>HTTP/1.1新增了PUT、DELETE、PATCH、OPTIONS、TRACE、CONNECT 请求方法，并且支持了持久连接。</p>
+</li>
+</ul>
+<h2 id="DNS-为什么使用-UDP协议作为传输层协议"><a href="#DNS-为什么使用-UDP协议作为传输层协议" class="headerlink" title="DNS 为什么使用 UDP协议作为传输层协议?"></a>DNS 为什么使用 UDP协议作为传输层协议?</h2><h2 id="HTTPS"><a href="#HTTPS" class="headerlink" title="HTTPS"></a>HTTPS</h2><h3 id="RSA-加密-非对称加密"><a href="#RSA-加密-非对称加密" class="headerlink" title="RSA 加密(非对称加密)"></a>RSA 加密(非对称加密)</h3><h3 id="TLS-SSL证书"><a href="#TLS-SSL证书" class="headerlink" title="TLS/SSL证书"></a>TLS/SSL证书</h3><ul>
+<li><p>TLS/SSL 中什么一定要用三个随机数，来生成”会话密钥”</p>
+</li>
+<li><p>SSL连按断开后如何饭复？</p>
+</li>
+</ul>
+<h2 id="浏览器存储"><a href="#浏览器存储" class="headerlink" title="浏览器存储"></a>浏览器存储</h2><h3 id="强缓存和协商缓存"><a href="#强缓存和协商缓存" class="headerlink" title="强缓存和协商缓存"></a>强缓存和协商缓存</h3><ul>
+<li><p>浏览器缓存在加载页面中的应用</p>
+<ul>
+<li><p>浏览器先根据这个资源的http头信息来判断是否命中强缓存。如果命中则直接加在缓存中的资源，并不会将请求发送到服务器。（强缓存）</p>
+</li>
+<li><p>如果未命中强缓存，则浏览器会将资源加载请求发送到服务器。服务器来判断浏览器本地缓存是否失效。若可以使用，则服务器并不会返回资源信息，浏览器继续从缓存加载资源。（协商缓存）</p>
+</li>
+<li><p>如果未命中协商缓存，则服务器会将完整的资源返回给浏览器，浏览器加载新资源，并更新缓存。（新的请求）</p>
+</li>
+</ul>
+</li>
+<li><p>强缓存(Cache-Control)：只有首次请求和服务器通信，读取缓存不用向服务器发送请求。返回200</p>
+</li>
+<li><p>协商缓存(ETag/If-None-Match)：总会与服务器交互，第一次是拿数据和ETag，之后凭ETag询问是否更新。返回304，从现有缓存加载资源 </p>
+</li>
+</ul>
+<h2 id="cookie-localStorage-sessionStorage三者区别"><a href="#cookie-localStorage-sessionStorage三者区别" class="headerlink" title="cookie/localStorage/sessionStorage三者区别"></a>cookie/localStorage/sessionStorage三者区别</h2><h3 id="Cookie和Session"><a href="#Cookie和Session" class="headerlink" title="Cookie和Session"></a>Cookie和Session</h3><h2 id="CDN服务"><a href="#CDN服务" class="headerlink" title="CDN服务"></a>CDN服务</h2><ul>
+<li><p>CDN服务是什么</p>
+</li>
+<li><p>负载平衡的两种实现方式？</p>
+</li>
+<li><p>什么是正向代理和反向代理？</p>
+</li>
+</ul>
+<h2 id="常见的网络攻击方法和解决方案？"><a href="#常见的网络攻击方法和解决方案？" class="headerlink" title="常见的网络攻击方法和解决方案？"></a>常见的网络攻击方法和解决方案？</h2><h3 id="XSS（跨站脚本攻击）——获取被攻击者的账户信息"><a href="#XSS（跨站脚本攻击）——获取被攻击者的账户信息" class="headerlink" title="XSS（跨站脚本攻击）——获取被攻击者的账户信息"></a>XSS（跨站脚本攻击）——获取被攻击者的账户信息</h3><ul>
+<li><p>攻击手段：攻击者往Web页面插入恶意<script>代码，当用户浏览页面时，嵌入其中的script恶意代码就会执行。将一些隐私数据像 cookie、session 发送给攻击者，将受害者重定向到一个由攻击者控制的网站，在受害者的机器上进行一些恶意操作。</p>
+</li>
+<li><p>场景：</p>
+<ul>
+<li><p>拼接url 获取用户敏感数据</p>
+</li>
+<li><p>后台存在漏洞拼接sql 盗取数据库信息</p>
+</li>
+</ul>
+</li>
+<li><p>解决方案：</p>
+<ul>
+<li><p>过滤<script>、<img>、<a>标签</p>
+</li>
+<li><p>对&lt;、&gt;在输入的时候进行编码转换</p>
+</li>
+<li><p>限制字符串长度</p>
+</li>
+<li><p>使用 HttpOnly Cookie<br>将重要的cookie标记为httponly，当浏览器向Web服务器发起请求的时就会带上cookie字段，但是在js脚本中却不能访问这个cookie，这样就避免了XSS攻击利用JavaScript的document.cookie获取cookie。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="CSRF（跨站请求伪造）——通过账号信息伪装成被攻击者实施攻击行为"><a href="#CSRF（跨站请求伪造）——通过账号信息伪装成被攻击者实施攻击行为" class="headerlink" title="CSRF（跨站请求伪造）——通过账号信息伪装成被攻击者实施攻击行为"></a>CSRF（跨站请求伪造）——通过账号信息伪装成被攻击者实施攻击行为</h3><ul>
+<li><p>攻击手段：用户登录受信任的A网站，产生Cookie，在没有登出A的情况下，访问了危险的B网站，B要求访问第三方站点（A），并发送一个请求（request），然后B就带着之前的Cookie（伪装成用户的名义）去请求。</p>
+</li>
+<li><p>解决方案：</p>
+<ul>
+<li><p>1.验证 HTTP Referer 字段，利用 HTTP 头中的 Referer 判断请求来源是否合法，Referer记录了该 HTTP 请求的来源地址。</p>
+<ul>
+<li><p>优点：简单易行，只需要在最后给所有安全敏感的请求统一增加一个拦截器来检查 Referer 的值就可以。</p>
+</li>
+<li><p>缺点：Referer 的值是由浏览器提供的，不可全信，低版本浏览器下 Referer 存在伪造风险。</p>
+</li>
+</ul>
+</li>
+<li><p> 2.在请求地址中添加 token 并验证。在请求中放入黑客所不能伪造的信息，并且该信息不存在于 cookie 之中。可以在 HTTP 请求中以参数的形式加入一个随机产生的 token，并在服务器端建立一个拦截器来验证这个 token，如果请求中没有 token 或者 token 内容不正确，则认为可能是 CSRF 攻击而拒绝该请求。</p>
+</li>
+<li><p>优点：这种方法要比检查 Referer 要安全一些，token 可以在用户登陆后产生并放于 session 之中，然后在每次请求时把 token 从 session 中拿出，与请求中的 token 进行比对。</p>
+</li>
+<li><p>缺点：对所有请求都添加 token 比较困难。难以保证 token 本身的安全，依然会被利用获取到 token。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="实现多个网站共享登陆状态-浏览器内多个标签页之间的通讯"><a href="#实现多个网站共享登陆状态-浏览器内多个标签页之间的通讯" class="headerlink" title="实现多个网站共享登陆状态/浏览器内多个标签页之间的通讯"></a>实现多个网站共享登陆状态/浏览器内多个标签页之间的通讯</h2>
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>Post title：HTTP相关</li>
+        <li>Post author：JannicaTan</li>
+        <li>Create time：2022-03-27 22:50:51</li>
+        <li>
+            Post link：https://jannicatan.github.io/Interview/面试/计算机网络相关/HTTP相关-2022-03.html
+        </li>
+        <li>
+            Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">#计算机网络</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/Interview/%E9%9D%A2%E8%AF%95/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%BE%93%E5%85%A5url-2022-03.html"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">浏览器输入URL过程详解</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2021</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">JannicaTan</a>
+        </div>
+        
+            <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%B1%82-HTTP%E3%80%81HTPS%E3%80%81DNS"><span class="nav-number">1.</span> <span class="nav-text">应用层-HTTP、HTPS、DNS</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP%E7%9A%84%E7%89%B9%E7%82%B9%EF%BC%9F%E5%AE%83%E6%9C%89%E4%BB%80%E4%B9%88%E7%BC%BA%E7%82%B9%EF%BC%9F"><span class="nav-number">1.1.</span> <span class="nav-text">HTTP的特点？它有什么缺点？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E7%82%B9%EF%BC%9A"><span class="nav-number">1.1.1.</span> <span class="nav-text">特点：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%BA%E7%82%B9%EF%BC%9A"><span class="nav-number">1.1.2.</span> <span class="nav-text">缺点：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP%E8%AF%B7%E6%B1%82%E6%8A%A5%E6%96%87%EF%BC%88%E5%AE%A2%E6%88%B7%E7%AB%AF%EF%BC%89"><span class="nav-number">1.2.</span> <span class="nav-text">HTTP请求报文（客户端）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="nav-number">1.2.1.</span> <span class="nav-text">常用请求方法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GET-%E6%A3%80%E7%B4%A2-amp-amp-%E8%8E%B7%E5%8F%96%EF%BC%89-POST%EF%BC%88%E5%88%9B%E5%BB%BA-%E6%9B%B4%E6%96%B0%EF%BC%89%E5%8C%BA%E5%88%AB"><span class="nav-number">1.2.2.</span> <span class="nav-text">GET(检索&amp;&amp;获取）&#x2F;POST（创建||更新）区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PUT%E5%92%8CPOST%E9%83%BD%E5%8F%AF%E4%BB%A5%E7%BB%99%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%96%B0%E5%A2%9E%E8%B5%84%E6%BA%90%EF%BC%8C%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="nav-number">1.2.3.</span> <span class="nav-text">PUT和POST都可以给服务器新增资源，有什么区别？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#http-%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95-options-%E6%96%B9%E6%B3%95%E6%9C%89%E4%BB%80%E4%B9%88%E7%94%A8%EF%BC%9F"><span class="nav-number">1.2.4.</span> <span class="nav-text">http 请求方法 options 方法有什么用？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E7%8A%B6%E6%80%81%E7%A0%81%EF%BC%9A"><span class="nav-number">1.3.</span> <span class="nav-text">常见状态码：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP%E5%93%8D%E5%BA%94%E6%8A%A5%E6%96%87%EF%BC%88%E6%9C%8D%E5%8A%A1%E7%AB%AF%EF%BC%89"><span class="nav-number">1.4.</span> <span class="nav-text">HTTP响应报文（服务端）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP%E7%9A%84keep-alive%E6%98%AF%E5%B9%B2%E4%BB%80%E4%B9%88%E7%9A%84%EF%BC%9F"><span class="nav-number">1.5.</span> <span class="nav-text">HTTP的keep-alive是干什么的？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP1-1-%E5%92%8C-HTTP-1-0%E4%B9%8B%E5%90%91%E5%8C%BA%E5%88%AB"><span class="nav-number">1.6.</span> <span class="nav-text">HTTP1.1 和 HTTP 1.0之向区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DNS-%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8-UDP%E5%8D%8F%E8%AE%AE%E4%BD%9C%E4%B8%BA%E4%BC%A0%E8%BE%93%E5%B1%82%E5%8D%8F%E8%AE%AE"><span class="nav-number">1.7.</span> <span class="nav-text">DNS 为什么使用 UDP协议作为传输层协议?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTPS"><span class="nav-number">1.8.</span> <span class="nav-text">HTTPS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#RSA-%E5%8A%A0%E5%AF%86-%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86"><span class="nav-number">1.8.1.</span> <span class="nav-text">RSA 加密(非对称加密)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TLS-SSL%E8%AF%81%E4%B9%A6"><span class="nav-number">1.8.2.</span> <span class="nav-text">TLS&#x2F;SSL证书</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AD%98%E5%82%A8"><span class="nav-number">1.9.</span> <span class="nav-text">浏览器存储</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%BA%E7%BC%93%E5%AD%98%E5%92%8C%E5%8D%8F%E5%95%86%E7%BC%93%E5%AD%98"><span class="nav-number">1.9.1.</span> <span class="nav-text">强缓存和协商缓存</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cookie-localStorage-sessionStorage%E4%B8%89%E8%80%85%E5%8C%BA%E5%88%AB"><span class="nav-number">1.10.</span> <span class="nav-text">cookie&#x2F;localStorage&#x2F;sessionStorage三者区别</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Cookie%E5%92%8CSession"><span class="nav-number">1.10.1.</span> <span class="nav-text">Cookie和Session</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CDN%E6%9C%8D%E5%8A%A1"><span class="nav-number">1.11.</span> <span class="nav-text">CDN服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E7%BD%91%E7%BB%9C%E6%94%BB%E5%87%BB%E6%96%B9%E6%B3%95%E5%92%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9F"><span class="nav-number">1.12.</span> <span class="nav-text">常见的网络攻击方法和解决方案？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#XSS%EF%BC%88%E8%B7%A8%E7%AB%99%E8%84%9A%E6%9C%AC%E6%94%BB%E5%87%BB%EF%BC%89%E2%80%94%E2%80%94%E8%8E%B7%E5%8F%96%E8%A2%AB%E6%94%BB%E5%87%BB%E8%80%85%E7%9A%84%E8%B4%A6%E6%88%B7%E4%BF%A1%E6%81%AF"><span class="nav-number">1.12.1.</span> <span class="nav-text">XSS（跨站脚本攻击）——获取被攻击者的账户信息</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+
+    
+<script src="/js/code-copy.js"></script>
+
+
+
+
+    
+<script src="/js/lazyload.js"></script>
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/left-side-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
+    
+</div>
+
+
+
+</body>
+</html>

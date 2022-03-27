@@ -9,7 +9,7 @@
     
     <title>
         
-            连等赋值问题 |
+            浏览器输入URL过程详解 |
         
         Jing&#39;s Blog
     </title>
@@ -152,7 +152,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">连等赋值问题</span>
+            <span class="title-hover-animation">浏览器输入URL过程详解</span>
         </div>
 
         
@@ -164,15 +164,15 @@
                     <div class="author">
                         <span class="name">JannicaTan</span>
                         
-                            <span class="author-label">初级前端</span>
+                            <span class="author-label">高级前端</span>
                         
                     </div>
                     <div class="meta-info">
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fas fa-edit"></i>&nbsp;
-        <span class="pc">2022-02-25 16:20:41</span>
-        <span class="mobile">2022-02-25 16:20</span>
+        <span class="pc">2022-03-27 22:47:12</span>
+        <span class="mobile">2022-03-27 22:47</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -192,7 +192,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/javascript/">javascript</a>&nbsp;
+                        <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>&nbsp;
                     </li>
                 
             </ul>
@@ -202,12 +202,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>721 Words</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>866 Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fas fa-clock"></i>&nbsp;<span>2 Mins</span>
+            <i class="fas fa-clock"></i>&nbsp;<span>3 Mins</span>
         </span>
     
     
@@ -223,65 +223,85 @@
         
 
         <div class="article-content markdown-body">
-            <p>坐着突然看到一个题，想了一下答错了，看了题解之后还是不太理解，终于在一个大佬的白话中get到卡住的点！</p>
-<p>解答地址：<a class="link"   target="_blank" rel="noopener" href="https://segmentfault.com/q/1010000002637728" >https://segmentfault.com/q/1010000002637728<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="1-赋值表达式的概念："><a href="#1-赋值表达式的概念：" class="headerlink" title="1.赋值表达式的概念："></a>1.赋值表达式的概念：</h3><p>计算一般的赋值表达式<code> A = B</code>按如下步骤：</p>
-<ol>
-<li>计算表达式A，得到一个引用<code>refA</code>；</li>
-<li>计算表达式B，得到一个值<code>valueB</code>；</li>
-<li>将<code>valueB</code>赋给<code>refA</code>指向的名称绑定；</li>
-<li>返回<code>valueB</code>。‘</li>
-</ol>
-<h3 id="连等的核心思想："><a href="#连等的核心思想：" class="headerlink" title="连等的核心思想："></a>连等的核心思想：</h3><p>连等是先确定<strong>所有</strong>变量的指针，再让指针指向那个赋值</p>
-<h3 id="对于题1"><a href="#对于题1" class="headerlink" title="对于题1:"></a>对于题1:</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> <span class="keyword">var</span> a = b =<span class="number">10</span>;</span><br><span class="line"><span class="number">2</span>      (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="number">3</span>          <span class="keyword">var</span> a = b = <span class="number">20</span>;</span><br><span class="line"><span class="number">4</span>       &#125;)();</span><br><span class="line"><span class="number">5</span> <span class="built_in">console</span>.log(a);</span><br><span class="line"><span class="number">6</span> <span class="built_in">console</span>.log(b);</span><br><span class="line"><span class="comment">//问：输出的 a = ?    b = ?</span></span><br><span class="line"><span class="comment">//10 20</span></span><br></pre></td></tr></table></figure>
-
+            <ul>
+<li><p>重要！当你在浏览器中输入 <a class="link"   target="_blank" rel="noopener" href="http://coogle.com/" >Coogle.com<i class="fas fa-external-link-alt"></i></a> 井且按下回车之后发生了什么？</p>
+<p>这篇写的太详细了！<a class="link"   target="_blank" rel="noopener" href="https://juejin.cn/post/6844904021308735502#heading-46" >https://juejin.cn/post/6844904021308735502#heading-46<i class="fas fa-external-link-alt"></i></a></p>
 <ul>
-<li>首先第一行的 var a = b = 10; 就是用了连等操作符，连等操作符是<strong>从右向左的</strong> 所以类似于b = 10; a = b;或者是 a = (b = 10);<ul>
-<li>此时，变量<strong>a</strong>是用<strong>var</strong>进行声明并赋值的所以是<strong>局部变量</strong>，</li>
-<li>但是b是未声明而直接进行赋值的所以是<strong>全局变量</strong>。</li>
-</ul>
-</li>
-<li>第二行开始使用匿名函数实现模仿块级作用于（私有作用域）:<strong><u>在里面声明的变量会在函数结束后被销毁除非被外部所使用</u></strong></li>
-<li>第三行，先使用外部局部变量b，b =20; 然后又**<u>重新声明了一个变量a</u>**<ul>
-<li>此时内部的局部新生成的a为20</li>
-</ul>
-</li>
-<li>第四行声明定义一个匿名函数后随即执行，**<u>私有作用域中创建的变量a在结束后随即被销毁</u>**.所以最后改变的只有外部的变量b的值.<ul>
-<li>此时b=20 ,a还是为之前外部的10</li>
-</ul>
-</li>
-</ul>
-<h3 id="对于题2"><a href="#对于题2" class="headerlink" title="对于题2:"></a>对于题2:</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> <span class="keyword">var</span> a = &#123;<span class="attr">n</span>: <span class="number">1</span>&#125;;</span><br><span class="line"><span class="number">2</span> <span class="keyword">var</span> b = a;</span><br><span class="line"><span class="number">3</span> a.x = a = &#123;<span class="attr">n</span>: <span class="number">2</span>&#125;;</span><br><span class="line"><span class="number">4</span> alert(a.x); <span class="comment">// --&gt; </span></span><br><span class="line"><span class="number">5</span> alert(b.x); <span class="comment">// --&gt; </span></span><br></pre></td></tr></table></figure>
-
+<li><p>网络方面</p>
 <ul>
-<li><p>第三行声明变量b，并且把a的对象引用赋值给b。</p>
-<ul>
-<li>此时，变量b和a指向的是同一个对象，即他们现在共享。</li>
-<li>a:{n:2},b:{n:2}</li>
-</ul>
-</li>
-<li><p>第四行:————连等是先确定<strong>所有</strong>变量的指针，再让指针指向那个赋值</p>
-<ul>
-<li>找到 a 和 a.x 的指针。如果已有指针，那么不改变它。如果没有指针，即那个变量还没被申明，那么就创建它，指向 null。<ul>
-<li>此时，a 是有指针的，指向 <code>&#123;n:1&#125;</code>；</li>
-<li>a.x 是没有指针的，所以创建它，指向 null。</li>
-</ul>
-</li>
-<li><strong><code>.</code>运算优先于<code>=</code>赋值运算</strong>，因此此处赋值可理解为<ol>
-<li>声明a对象中的x属性，用于赋值，此时b指向a，同时拥有未赋值的x属性</li>
-<li>对a对象赋值，此时变量名a改变指向到对象{n:2}</li>
-<li>对步骤1中x属性，也即a原指向对象的x属性，也即b指向对象的x属性赋值</li>
-</ol>
-</li>
-</ul>
-</li>
-<li><p>上图更明确：</p>
-<p><img  
+<li><p>总结过程<img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/jannicaTan/image_picX/master/Interview/%E8%BF%9E%E7%AD%89%E8%B5%8B%E5%80%BC.webp"
-                      alt="连等赋值"
+                     data-src="https://api2.mubu.com/v3/document_image/84e65d37-2dbd-41bc-b0b4-04588954c430-17016005.jpg"
+                      alt="img"
                 ></p>
+</li>
+<li><p>\1. 构建请求：<br>浏览器会构建请求行:</p>
+</li>
+<li><p>\2. 查找强缓存：浏览器缓存在加载页面中的应用<br>先检查强缓存，如果命中直接使用，否则进入下一步。</p>
+</li>
+<li><p>\3. DNS解析域名</p>
+<ul>
+<li><p>由于我们输入的是域名，而数据包是通过IP地址传给对方的。因此我们需要得到域名对应的IP地址。这个过程需要依赖一个服务系统，这个系统将域名和 IP 一一映射，我们将这个系统就叫做DNS（域名系统）。得到具体 IP 的过程就是DNS解析。</p>
+</li>
+<li><p>注意：浏览器提供了DNS数据缓存功能。即如果一个域名已经解析过，那会把解析的结果缓存下来，下次处理直接走缓存，不需要经过 DNS解析。如果不指定端口的话，默认采用对应的 IP 的 80 端口。</p>
+</li>
+</ul>
+</li>
+<li><p>\4. 建立 TCP 连接</p>
+<ul>
+<li><p>注意：Chrome 在同一个域名下要求同时最多只能有 6 个 TCP 连接，超过 6 个的话剩下的请求就得等待。</p>
+</li>
+<li><p>建立 TCP连接经历了下面三个阶段:</p>
+<ul>
+<li><p>通过TCP三次握手(即总共发送3个数据包确认已经建立连接)建立客户端和服务器之间的连接。</p>
+</li>
+<li><p>进行数据传输。这里有一个重要的机制，就是接收方接收到数据包后必须要向发送方确认, 如果发送方没有接到这个确认的消息，就判定为数据包丢失，并重新发送该数据包。</p>
+<ul>
+<li>优化策略：拆包——就是把大的数据包拆成一个个小包，依次传输到接收方，接收方按照这个小包的顺序把它们组装成完整数据包。</li>
+</ul>
+</li>
+<li><p>断开连接的阶段。数据传输完成，现在要断开连接了，通过TCP四次挥手来断开连接。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>5.发送 HTTP 请求<br>TCP连接建立完毕，浏览器可以和服务器开始通信，即开始发送 HTTP 请求。</p>
+</li>
+<li><p>6.网络响应<br>HTTP 请求到达服务器，服务器进行对应的处理。最后要把数据传给浏览器，也就是返回网络响应。<br>​</p>
+</li>
+<li><p>7.响应完成，判断Connection字段是否建立持久连接</p>
+<ul>
+<li>如果请求头或响应头中包含Connection: Keep-Alive，表示建立了持久连接，这样TCP连接会一直保持，之后请求统一站点的资源会复用这个连接。否则断开TCP连接, 请求-响应流程结束。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>解析算法篇</p>
+<p>浏览器解析html代码，并请求html代码中的资源（如js、css、图片等）（先得到html代码，才能去找这些资源）</p>
+<ul>
+<li><p>生成布局树(Layout Tree)</p>
+</li>
+<li><p>样式计算【解析CSS文件（将其转化为一个结构化的对象，即styleSheets）构建渲染树】</p>
+</li>
+<li><p>构建 DOM树</p>
+</li>
+</ul>
+</li>
+<li><p>渲染过程</p>
+<ul>
+<li><p>建立图层树(Layer Tree)</p>
+</li>
+<li><p>生成绘制列表<br>渲染引擎会将图层的绘制拆分成一个个绘制指令，比如先画背景、再描绘边框……然后将这些指令按顺序组合成一个待绘制列表</p>
+</li>
+<li><p>生成图块并栅格化</p>
+</li>
+<li><p>显示器显示内容</p>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 
@@ -291,11 +311,11 @@
             <div class="post-copyright-info">
                 <div class="article-copyright-info-container">
     <ul>
-        <li>Post title：连等赋值问题</li>
+        <li>Post title：浏览器输入URL过程详解</li>
         <li>Post author：JannicaTan</li>
-        <li>Create time：2022-02-25 16:20:41</li>
+        <li>Create time：2022-03-27 22:47:12</li>
         <li>
-            Post link：https://jannicatan.github.io/Interview/interview/20220225-2022-02.html
+            Post link：https://jannicatan.github.io/Interview/面试/计算机网络相关/浏览器输入url-2022-03.html
         </li>
         <li>
             Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
@@ -310,7 +330,7 @@
             <ul class="post-tags-box">
                 
                     <li class="tag-item">
-                        <a href="/tags/javascript/">#javascript</a>&nbsp;
+                        <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">#计算机网络</a>&nbsp;
                     </li>
                 
             </ul>
@@ -322,13 +342,13 @@
                     <div class="article-prev">
                         <a class="prev"
                            rel="prev"
-                           href="/VUE/VUE-study/vue-base-2022-02.html"
+                           href="/Interview/%E9%9D%A2%E8%AF%95/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3/HTTP%E7%9B%B8%E5%85%B3-2022-03.html"
                         >
                             <span class="left arrow-icon flex-center">
                               <i class="fas fa-chevron-left"></i>
                             </span>
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">vue基础——特性/指令/过滤器/侦听器/计算属性</span>
+                                <span class="post-nav-title-item">HTTP相关</span>
                                 <span class="post-nav-item">Prev posts</span>
                             </span>
                         </a>
@@ -338,10 +358,10 @@
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/VUE-study/webpack%E5%AD%A6%E4%B9%A0%E5%8F%8A%E9%85%8D%E7%BD%AE-2022-02.html"
+                           href="/Interview/%E9%9D%A2%E8%AF%95/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3/TCP%E5%92%8CUDP-2022-03.html"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">Webpack基础配置(待继续更新)</span>
+                                <span class="post-nav-title-item">计算机网络</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -466,7 +486,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E8%B5%8B%E5%80%BC%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E6%A6%82%E5%BF%B5%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">1.赋值表达式的概念：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9E%E7%AD%89%E7%9A%84%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">连等的核心思想：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E4%BA%8E%E9%A2%981"><span class="nav-number">3.</span> <span class="nav-text">对于题1:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E4%BA%8E%E9%A2%982"><span class="nav-number">4.</span> <span class="nav-text">对于题2:</span></a></li></ol>
+        
     </div>
 </div>
         </aside>
