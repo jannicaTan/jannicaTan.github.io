@@ -1,8 +1,8 @@
 ---
 title: 计算机网络
 date: 2022-03-26 22:59:11
-tags: interview
-categories: interview
+tags: 计算机网络
+categories: Interview
 ---
 
 - ## 知识点：
@@ -241,11 +241,3 @@ categories: interview
         - 失败3：服务端分两次读取到了两个数据包，第一次读取到了D1包的部分内容D1_1，第二次读取到了D1包的剩余内容D1_2和D2包的整包。
 
       - 如果此时服务端TCP接收滑窗非常小，而数据包D1和D2比较大，很有可能会发生第五种可能，即服务端分多次才能将D1和D2包接收完全，期间发生多次拆包。
-
-  - ### 应用层-HTTP、HTPS、DNS
-
-    - HTTP的特点？它有什么缺点？
-
-    - HTTP请求报文
-
-    - HTTP响应报文
