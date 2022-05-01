@@ -4,7 +4,7 @@ date: 2022-04-22 20:21:33
 tags: 
   - VUE
   - 场景错误
-categories:
+categories: work
 ---
 ### 错误1：切换tab栏发现echarts组件缩放失效
 

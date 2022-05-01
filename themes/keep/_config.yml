@@ -105,7 +105,7 @@ post:
     enable: true
     auto: false # if true, show Lv1, Lv2, Lv3... , If false, show custom label
     # label array item can be one or more
-    custom_label_list: ["菜鸟前端", "初级前端", "高级前端", "躺平"]
+    custom_label_list: ["小白前端", "菜鸟前端", "入门前端", "躺平"]
 
 # ---------------------------------------------------------------------------------------
 # Code copy
