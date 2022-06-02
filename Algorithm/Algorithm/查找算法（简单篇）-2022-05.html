@@ -9,6 +9,8 @@
     
     <title>
         
+            查找算法（简单篇） |
+        
         Jing&#39;s Blog
     </title>
     
@@ -150,7 +152,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation"></span>
+            <span class="title-hover-animation">查找算法（简单篇）</span>
         </div>
 
         
@@ -169,16 +171,42 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fas fa-edit"></i>&nbsp;
-        <span class="pc">2022-06-02 22:22:31</span>
-        <span class="mobile">2022-06-02 22:22</span>
+        <span class="pc">2022-05-21 22:10:55</span>
+        <span class="mobile">2022-05-21 22:10</span>
     </span>
     
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/Algorithm/">Algorithm</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/LeetCode/">LeetCode</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E5%89%91%E6%8C%87offer/">剑指offer</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
     
 
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>873 Words</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>866 Words</span>
         </span>
     
     
@@ -199,7 +227,7 @@
         
 
         <div class="article-content markdown-body">
-            <h1 id="查找算法（简单篇）"><a href="#查找算法（简单篇）" class="headerlink" title="查找算法（简单篇）"></a>查找算法（简单篇）</h1><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><blockquote>
+            <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><blockquote>
 <p>📌<strong>有序列表——第一时间想到二分法</strong></p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//二分代码块</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">let</span> l=<span class="number">0</span>,r=nums.length-<span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span>(l&lt;=r)&#123;</span><br><span class="line">        <span class="keyword">let</span> mid=<span class="built_in">Math</span>.floor((r+l)/<span class="number">2</span>)</span><br><span class="line">        <span class="keyword">if</span>(nums[mid]==target)&#123;</span><br><span class="line">            l=mid+<span class="number">1</span></span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            r=mid-<span class="number">1</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> l</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -260,11 +288,11 @@
             <div class="post-copyright-info">
                 <div class="article-copyright-info-container">
     <ul>
-        <li>Post title：</li>
+        <li>Post title：查找算法（简单篇）</li>
         <li>Post author：JannicaTan</li>
-        <li>Create time：2022-06-02 22:22:31</li>
+        <li>Create time：2022-05-21 22:10:55</li>
         <li>
-            Post link：https://jannicatan.github.io/uncategorized/Algorithm/查找算法（简单篇）-2022-06.html
+            Post link：https://jannicatan.github.io/Algorithm/Algorithm/查找算法（简单篇）-2022-05.html
         </li>
         <li>
             Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
@@ -276,18 +304,45 @@
         
 
         
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/LeetCode/">#LeetCode</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E5%89%91%E6%8C%87offer/">#剑指offer</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
 
         
             <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/uncategorized/JS-study/%E9%97%AD%E5%8C%85-2022-05.html"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">闭包(愤怒学习版小谭)</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
                 
                 
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/uncategorized/page-2022-05.html"
+                           href="/uncategorized/JS-study/%E6%89%8B%E5%86%99/apply-2022-05.html"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">page</span>
+                                <span class="post-nav-title-item">手写call/apply/bind及理解</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -412,7 +467,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95%EF%BC%88%E7%AE%80%E5%8D%95%E7%AF%87%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">查找算法（简单篇）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%AE%E5%BD%95"><span class="nav-number">1.1.</span> <span class="nav-text">目录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%91%E6%8C%87-Offer-03-%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E6%95%B0%E5%AD%97"><span class="nav-number">1.1.1.</span> <span class="nav-text">剑指 Offer 03. 数组中重复的数字</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A4%BA%F0%9F%8C%B0%EF%BC%9A"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">示🌰：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF%EF%BC%9A"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">思路：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%91%E6%8C%87-Offer-53-I-%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E6%95%B0%E5%AD%97-I"><span class="nav-number">1.1.2.</span> <span class="nav-text">剑指 Offer 53 - I. 在排序数组中查找数字 I</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A4%BA%F0%9F%8C%B0%EF%BC%9A-1"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">示🌰：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%F0%9F%A4%94%EF%B8%8F%E7%96%91%E9%97%AE%EF%BC%9A%E8%BF%99%E4%BF%A9%E7%AB%9F%E7%84%B6%E5%B7%AE%E4%B8%8D%E5%A4%9A%E7%9A%84%E6%95%88%E7%8E%87%EF%BC%8C%E6%8C%89%E7%90%86%E6%9D%A5%E8%AF%B4%E4%BA%8C%E5%88%86%E4%B8%8D%E6%98%AF%E5%BA%94%E8%AF%A5%E6%9B%B4%E5%BF%AB%E5%90%97%EF%BC%9F"><span class="nav-number">1.1.2.3.</span> <span class="nav-text">🤔️疑问：这俩竟然差不多的效率，按理来说二分不是应该更快吗？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%91%E6%8C%87-Offer-53-II-0%EF%BD%9En-1%E4%B8%AD%E7%BC%BA%E5%A4%B1%E7%9A%84%E6%95%B0%E5%AD%97"><span class="nav-number">1.1.3.</span> <span class="nav-text">剑指 Offer 53 - II. 0～n-1中缺失的数字</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A4%BA%F0%9F%8C%B0%EF%BC%9A-2"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">示🌰：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF%EF%BC%9A-1"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">思路：</span></a></li></ol></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%AE%E5%BD%95"><span class="nav-number">1.</span> <span class="nav-text">目录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%91%E6%8C%87-Offer-03-%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E6%95%B0%E5%AD%97"><span class="nav-number">1.1.</span> <span class="nav-text">剑指 Offer 03. 数组中重复的数字</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A4%BA%F0%9F%8C%B0%EF%BC%9A"><span class="nav-number">1.1.1.</span> <span class="nav-text">示🌰：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF%EF%BC%9A"><span class="nav-number">1.1.2.</span> <span class="nav-text">思路：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%91%E6%8C%87-Offer-53-I-%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E6%95%B0%E5%AD%97-I"><span class="nav-number">1.2.</span> <span class="nav-text">剑指 Offer 53 - I. 在排序数组中查找数字 I</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A4%BA%F0%9F%8C%B0%EF%BC%9A-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">示🌰：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">1.2.2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%F0%9F%A4%94%EF%B8%8F%E7%96%91%E9%97%AE%EF%BC%9A%E8%BF%99%E4%BF%A9%E7%AB%9F%E7%84%B6%E5%B7%AE%E4%B8%8D%E5%A4%9A%E7%9A%84%E6%95%88%E7%8E%87%EF%BC%8C%E6%8C%89%E7%90%86%E6%9D%A5%E8%AF%B4%E4%BA%8C%E5%88%86%E4%B8%8D%E6%98%AF%E5%BA%94%E8%AF%A5%E6%9B%B4%E5%BF%AB%E5%90%97%EF%BC%9F"><span class="nav-number">1.2.3.</span> <span class="nav-text">🤔️疑问：这俩竟然差不多的效率，按理来说二分不是应该更快吗？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%91%E6%8C%87-Offer-53-II-0%EF%BD%9En-1%E4%B8%AD%E7%BC%BA%E5%A4%B1%E7%9A%84%E6%95%B0%E5%AD%97"><span class="nav-number">1.3.</span> <span class="nav-text">剑指 Offer 53 - II. 0～n-1中缺失的数字</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A4%BA%F0%9F%8C%B0%EF%BC%9A-2"><span class="nav-number">1.3.1.</span> <span class="nav-text">示🌰：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF%EF%BC%9A-1"><span class="nav-number">1.3.2.</span> <span class="nav-text">思路：</span></a></li></ol></li></ol></li></ol>
     </div>
 </div>
         </aside>
